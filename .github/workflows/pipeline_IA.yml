@@ -36,4 +36,4 @@ jobs:
         GEMINI_KEY_API: ${{ secrets.GEMINI_KEY_API }}
         
       run: |
-        python gemini_classifications.py
+        python gemini_classification.py
