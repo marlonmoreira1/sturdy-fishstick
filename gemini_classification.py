@@ -109,7 +109,7 @@ def contextualizar_videos_groq(df, groq_api_key, limite=100):
     
     genai.configure(api_key=groq_api_key)
     
-    df_para_classificar = df.iloc[57073:57095].copy()
+    df_para_classificar = df.copy()
     print(f"\nClassificando {len(df_para_classificar)} vídeos com Groq...")
     
     classificacoes = []
@@ -467,8 +467,9 @@ Sem explicações. Sem JSON.
 def upload_df_to_gcs_raw(df, bucket_name, filename):
     
     
-    creds_dict = os.environ['STORAGE_KEY']
+    creds_json = os.environ['STORAGE_KEY']
 
+    creds_dict = json.loads(creds_json)
     
     credentials = service_account.Credentials.from_service_account_info(creds_dict)
 
@@ -586,4 +587,5 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
