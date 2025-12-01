@@ -7,10 +7,9 @@ import re
 import google.generativeai as genai
 from google.cloud import storage
 from google.oauth2 import service_account
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
+
 
 # ============================================
 # FUNÇÕES
@@ -201,7 +200,7 @@ AGORA GERE A SINOPSE TÉCNICA BASEADA NOS DADOS DO VÍDEO.
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(25)
+        time.sleep(5)
     
     df_para_classificar['contexto'] = classificacoes
     return df_para_classificar
@@ -305,7 +304,7 @@ a classificação DEVE ser "invalido".
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(25)
+        time.sleep(5)
     
     df_para_classificar['classificacao_gemini'] = classificacoes
     return df_para_classificar
@@ -440,7 +439,8 @@ RESPONDA APENAS COM:
 - O nome EXATO de um tópico da lista acima
 - "invalido"
 
-Sem explicações. Sem JSON."""
+Sem explicações. Sem JSON.
+"""
         
         # Chamar Groq
         try:
@@ -455,7 +455,7 @@ Sem explicações. Sem JSON."""
             topicos_classificados.append("erro")
         
         # Rate limit
-        time.sleep(20)
+        time.sleep(5)
     
     # Adicionar coluna ao DataFrame
     df_para_classificar['topico_trilha'] = topicos_classificados
@@ -500,7 +500,7 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key):
     print("=" * 70)
     
     # 1. Carregar 60 canais
-    df_canais = carregar_canais(csv_path, limite=100)
+    df_canais = carregar_canais(csv_path, limite=50)
     
     # 2. Buscar vídeos de todos os canais
     todos_videos = []
@@ -584,4 +584,5 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("AMOSTRA DOS RESULTADOS")
     print("=" * 70)
+
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
