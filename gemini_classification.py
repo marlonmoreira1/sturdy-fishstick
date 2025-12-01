@@ -576,7 +576,7 @@ if __name__ == "__main__":
     CSV_PATH = 'datasets/canais_tech_BR.csv'
     YOUTUBE_API_KEY = os.environ['API_KEY']
     GEMINI_API_KEY = os.environ['GEMINI_API_KEY']
-    GROQ_API_KEY = os.environ['GROQ_API_KEY']
+    # GROQ_API_KEY = os.environ['GROQ_API_KEY']
     # Executar teste
     df_resultado = executar_teste(CSV_PATH, YOUTUBE_API_KEY, GEMINI_API_KEY)
     
@@ -586,3 +586,4 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
