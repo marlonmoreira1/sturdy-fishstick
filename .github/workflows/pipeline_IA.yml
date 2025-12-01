@@ -33,7 +33,7 @@ jobs:
       env:
         STORAGE_KEY: ${{ secrets.STORAGE_KEY }}        
         API_KEY: ${{ secrets.API_KEY }}
-        GEMINI_KEY_API: ${{ secrets.GEMINI_KEY_API }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         
       run: |
         python gemini_classification.py
