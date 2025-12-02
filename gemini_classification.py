@@ -478,7 +478,7 @@ def upload_df_to_gcs_raw(df, bucket_name, filename):
     bucket = client.bucket(bucket_name)
 
     
-    csv_data = df.to_csv(index=False)
+    csv_data = df.to_csv(index=False, sep=';')
 
     
     blob_path = f"{filename}"
@@ -587,6 +587,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
