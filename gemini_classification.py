@@ -128,7 +128,7 @@ REGRAS ABSOLUTAS
 ======================================================
 1. **Não invente tecnologias.**  
    Só cite ferramentas, bibliotecas, frameworks ou conceitos SE estiverem
-   explicitamente presentes no título, descrição ou tags.
+   explicitamente presentes no título ou descrição (que não sejam partes de trechos a serem ignorados).
 
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
    - links  
@@ -589,6 +589,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
