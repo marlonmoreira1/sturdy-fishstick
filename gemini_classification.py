@@ -116,7 +116,7 @@ def contextualizar_videos_groq(df, groq_api_key, limite=100):
     
     for idx, row in df_para_classificar.iterrows():
         prompt = f"""Você é um contextualizador técnico avançado de vídeos educacionais de tecnologia.
-Sua função é ler o título, descrição, tags e nome do canal e produzir uma sinopse técnica limpa, eliminando todo ruído.
+Sua função é ler o título, descrição e nome do canal e produzir uma sinopse técnica limpa, eliminando todo ruído.
 
 ======================================================
 OBJETIVO
@@ -133,12 +133,12 @@ REGRAS ABSOLUTAS
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
    - links  
    - redes sociais  
-   - DIVULGAÇÃO de cursos, eventos, bootcamps e etc. 
-   - pedidos de inscrição  
-   - autopromoções (cursos, eventos, bootcamps e etc)
+   - cursos  
+   - pedidos de inscrição
    - dicas de carreira
-   - review de ferramentas
-   - memes ou piadas da área
+   - eventos
+   - review de ferramenta
+   - autopromoções  
    - anúncios  
    - emojis  
    - listas genéricas de palavras-chave  
@@ -161,7 +161,6 @@ ENTRADAS DO VÍDEO
 ======================================================
 Título: {row['title']}
 Descrição: {row['description'] if row['description'] else 'Sem descrição'}
-Tags: {', '.join(row.get('tags', [])) if row.get('tags') else 'Sem tags'}
 Nome do canal: {row['channel_name']}
 
 ======================================================
@@ -590,6 +589,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
