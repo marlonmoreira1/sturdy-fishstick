@@ -237,7 +237,7 @@ AGORA GERE A SINOPSE TÉCNICA BASEADA NOS DADOS DO VÍDEO.
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(3)
+        time.sleep(4)
     
     df_para_classificar['contexto'] = classificacoes
     return df_para_classificar
@@ -624,6 +624,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
