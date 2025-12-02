@@ -133,9 +133,12 @@ REGRAS ABSOLUTAS
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
    - links  
    - redes sociais  
-   - cursos  
+   - DIVULGAÇÃO de cursos, eventos, bootcamps e etc. 
    - pedidos de inscrição  
-   - autopromoções  
+   - autopromoções (cursos, eventos, bootcamps e etc)
+   - dicas de carreira
+   - review de ferramentas
+   - memes ou piadas da área
    - anúncios  
    - emojis  
    - listas genéricas de palavras-chave  
@@ -501,7 +504,7 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key):
     print("=" * 70)
     
     # 1. Carregar 60 canais
-    df_canais = carregar_canais(csv_path, limite=3)
+    df_canais = carregar_canais(csv_path, limite=1)
     
     # 2. Buscar vídeos de todos os canais
     todos_videos = []
@@ -587,6 +590,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
