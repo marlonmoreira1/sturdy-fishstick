@@ -200,7 +200,7 @@ AGORA GERE A SINOPSE TÉCNICA BASEADA NOS DADOS DO VÍDEO.
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(5)
+        time.sleep(3)
     
     df_para_classificar['contexto'] = classificacoes
     return df_para_classificar
@@ -304,7 +304,7 @@ a classificação DEVE ser "invalido".
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(5)
+        time.sleep(2)
     
     df_para_classificar['classificacao_gemini'] = classificacoes
     return df_para_classificar
@@ -455,7 +455,7 @@ Sem explicações. Sem JSON.
             topicos_classificados.append("erro")
         
         # Rate limit
-        time.sleep(5)
+        time.sleep(2)
     
     # Adicionar coluna ao DataFrame
     df_para_classificar['topico_trilha'] = topicos_classificados
@@ -501,7 +501,7 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key):
     print("=" * 70)
     
     # 1. Carregar 60 canais
-    df_canais = carregar_canais(csv_path, limite=12)
+    df_canais = carregar_canais(csv_path, limite=2)
     
     # 2. Buscar vídeos de todos os canais
     todos_videos = []
@@ -587,6 +587,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
