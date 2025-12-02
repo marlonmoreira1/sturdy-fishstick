@@ -124,6 +124,41 @@ OBJETIVO
 Gerar um resumo técnico confiável, eliminando completamente ruídos promocionais e elementos irrelevantes, deixando apenas os dados úteis para que modelos futuros consigam classificar corretamente qual tecnologia e operação o vídeo ensina.
 
 ======================================================
+DETECÇÃO NÃO TÉCNICO
+======================================================
+Antes de gerar a sinopse, determine se o vídeo é realmente técnico.
+
+O vídeo NÃO É TÉCNICO quando:
+
+- não há demonstração, explicação ou ensino de tecnologia
+
+- o conteúdo serve apenas para:
+
+    - marketing, divulgação, anúncio, promoção, venda
+
+    - sorteios, eventos, chamadas de live
+
+    - carreira, mindset, motivação, trajetória
+
+    - memes, humor, storytelling, dramatização
+
+    - opinião, review, comparação de cursos/serviços
+
+    - vlog, rotina, dia a dia
+
+    - temas aspiracionais (ex.: “destrave sua carreira”, “oportunidade”, “novo lote”, etc.)
+
+📌 Se o vídeo NÃO for técnico, retorne EXATAMENTE:
+
+"O vídeo não apresenta conteúdo técnico ensinável."
+
+E nada mais.
+
+NÃO gere sinopse.
+NÃO cite tecnologia.
+NÃO tente extrair nada técnico.
+
+======================================================
 REGRAS ABSOLUTAS
 ======================================================
 1. **Não invente tecnologias.**  
@@ -589,6 +624,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
