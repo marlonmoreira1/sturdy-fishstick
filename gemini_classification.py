@@ -501,7 +501,7 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key):
     print("=" * 70)
     
     # 1. Carregar 60 canais
-    df_canais = carregar_canais(csv_path, limite=2)
+    df_canais = carregar_canais(csv_path, limite=3)
     
     # 2. Buscar vídeos de todos os canais
     todos_videos = []
@@ -587,6 +587,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
