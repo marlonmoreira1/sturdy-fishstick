@@ -131,26 +131,27 @@ REGRAS ABSOLUTAS
    explicitamente presentes no título ou descrição (que não sejam partes de trechos a serem ignorados).
 
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
-   - links  
-   - redes sociais  
-   - cursos  
-   - pedidos de inscrição   
-   - autopromoções  
-   - anúncios  
-   - emojis      
-   - agradecimentos  
-   - textos motivacionais  
-   - hashtags     
-   - trechos sobre carreira, profissão, trajetória ou sucesso
-   - textos motivacionais ou aspiracionais
-   - divulgação de eventos, lives, bootcamps, workshops ou desafios
-   - anúncios de lotes, promoções, vagas, descontos ou sorteios
-   - conteúdos humorísticos, memes ou storytelling não técnico
-   - vlogs, bastidores, rotina ou vida pessoal
-   - reviews, opiniões ou comparações de cursos, ferramentas ou serviços
+    - links  
+    - redes sociais     
+    - emojis  
+    - hashtags (textos/trechos que iniciem com #)
+    - agradecimentos  
+    - textos motivacionais  
+    - chamadas de ação (ex.: “comente”, “garanta sua vaga”, “último lote”, “aproveite agora”)  
+    - textos aspiracionais ou emocionais  
+    - storytelling, personagens fictícios, metáforas ou dramatização  
+    - memes ou conteúdo humorístico  
+    - divulgação de eventos, lives, bootcamps, imersões, desafios, semanas, maratonas  
+    - promoções, Black Friday, descontos, lotes, vagas limitadas  
+    - conteúdos sobre carreira, sucesso, mentalidade ou trajetória profissional  
+    - reviews, opiniões ou comparações de cursos, plataformas ou comunidades  
+    - vlogs, rotina, bastidores ou vida pessoal
 
+    Esses elementos **NUNCA caracterizam conteúdo técnico**, mesmo que mencionem
+    nomes de tecnologias, linguagens, frameworks ou ferramentas.
     Essas partes devem ser completamente desconsideradas antes de gerar a sinopse
-    e não podem influenciar na interpretação técnica do conteúdo. 
+    e não podem influenciar na interpretação técnica do conteúdo.     
+ 
 
 3. O nome do canal **NUNCA é prova** de qual tecnologia o vídeo usa.  
    Use-o apenas como reforço contextual (ex.: canal dedicado a Excel → reforça, mas não prova).
@@ -592,6 +593,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
