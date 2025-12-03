@@ -124,41 +124,6 @@ OBJETIVO
 Gerar um resumo técnico confiável, eliminando completamente ruídos promocionais e elementos irrelevantes, deixando apenas os dados úteis para que modelos futuros consigam classificar corretamente qual tecnologia e operação o vídeo ensina.
 
 ======================================================
-DETECÇÃO NÃO TÉCNICO
-======================================================
-Antes de gerar a sinopse, determine se o vídeo é realmente técnico.
-
-O vídeo NÃO É TÉCNICO quando:
-
-- não há demonstração, explicação ou ensino de tecnologia
-
-- o conteúdo serve apenas para:
-
-    - marketing, divulgação, anúncio, promoção, venda
-
-    - sorteios, eventos, chamadas de live
-
-    - carreira, mindset, motivação, trajetória
-
-    - memes, humor, storytelling, dramatização
-
-    - opinião, review, comparação de cursos/serviços
-
-    - vlog, rotina, dia a dia
-
-    - temas aspiracionais (ex.: “destrave sua carreira”, “oportunidade”, “novo lote”, etc.)
-
-📌 Se o vídeo NÃO for técnico, retorne EXATAMENTE:
-
-"O vídeo não apresenta conteúdo técnico ensinável."
-
-E nada mais.
-
-NÃO gere sinopse.
-NÃO cite tecnologia.
-NÃO tente extrair nada técnico.
-
-======================================================
 REGRAS ABSOLUTAS
 ======================================================
 1. **Não invente tecnologias.**  
@@ -169,10 +134,7 @@ REGRAS ABSOLUTAS
    - links  
    - redes sociais  
    - cursos  
-   - pedidos de inscrição
-   - dicas de carreira
-   - eventos
-   - review de ferramenta
+   - pedidos de inscrição   
    - autopromoções  
    - anúncios  
    - emojis  
@@ -180,7 +142,17 @@ REGRAS ABSOLUTAS
    - agradecimentos  
    - textos motivacionais  
    - conversa paralela  
-   - conteúdo sem relação com tecnologia  
+   - conteúdo sem relação com tecnologia 
+   - trechos sobre carreira, profissão, trajetória ou sucesso
+   - textos motivacionais ou aspiracionais
+   - divulgação de eventos, lives, bootcamps, workshops ou desafios
+   - anúncios de lotes, promoções, vagas, descontos ou sorteios
+   - conteúdos humorísticos, memes ou storytelling não técnico
+   - vlogs, bastidores, rotina ou vida pessoal
+   - reviews, opiniões ou comparações de cursos, ferramentas ou serviços
+
+    Essas partes devem ser completamente desconsideradas antes de gerar a sinopse
+    e não podem influenciar na interpretação técnica do conteúdo. 
 
 3. O nome do canal **NUNCA é prova** de qual tecnologia o vídeo usa.  
    Use-o apenas como reforço contextual (ex.: canal dedicado a Excel → reforça, mas não prova).
@@ -210,7 +182,7 @@ contendo:
 - conceitos técnicos centrais que o vídeo explica
 - a operação prática demonstrada
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
-- absolutamente nenhum ruído promocional
+- considere somente o que for estritamente técnico dentro do título ou da descrição
 
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
 
@@ -241,8 +213,6 @@ AGORA GERE A SINOPSE TÉCNICA BASEADA NOS DADOS DO VÍDEO.
     
     df_para_classificar['contexto'] = classificacoes
     return df_para_classificar
-
-
 
 
 
@@ -624,6 +594,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
