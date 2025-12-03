@@ -137,12 +137,10 @@ REGRAS ABSOLUTAS
    - pedidos de inscrição   
    - autopromoções  
    - anúncios  
-   - emojis  
-   - listas genéricas de palavras-chave  
+   - emojis      
    - agradecimentos  
    - textos motivacionais  
-   - conversa paralela  
-   - conteúdo sem relação com tecnologia 
+   - hashtags     
    - trechos sobre carreira, profissão, trajetória ou sucesso
    - textos motivacionais ou aspiracionais
    - divulgação de eventos, lives, bootcamps, workshops ou desafios
@@ -594,6 +592,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
