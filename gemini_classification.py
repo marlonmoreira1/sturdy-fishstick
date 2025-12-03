@@ -173,7 +173,7 @@ Nome do canal: {row['channel_name']}
 SAÍDA OBRIGATÓRIA (EM JSON)
 ======================================================
 
-Produza **apenas um parágrafo de sinopse técnica**, com no máximo 8–12 linhas,
+Produza **apenas um parágrafo de sinopse técnica**, com no máximo 5–10 linhas,
 contendo:
 
 - a ferramenta principal citada
@@ -184,12 +184,6 @@ contendo:
 - considere somente o que for estritamente técnico dentro do título ou da descrição
 
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
-
-==========================================================
-EXEMPLO DE ESTILO (não copie o conteúdo, apenas o formato)
-===========================================================
-
-"O vídeo demonstra como utilizar Python para consumir uma API REST, explicando como enviar requisições GET e interpretar respostas JSON. O autor utiliza a biblioteca requests e mostra como tratar códigos de status, converter dados para dicionários e exibir campos específicos. O foco está na construção do script, testes de chamada e boas práticas de organização do código."
 
 AGORA GERE A SINOPSE TÉCNICA BASEADA NOS DADOS DO VÍDEO.
 """
@@ -593,6 +587,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
