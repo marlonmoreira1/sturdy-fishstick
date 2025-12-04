@@ -135,9 +135,8 @@ REGRAS ABSOLUTAS
     - redes sociais     
     - emojis  
     - hashtags 
-    - agradecimentos  
-    - textos motivacionais  
-    - chamadas de ação (ex.: “comente”, “garanta sua vaga”, “último lote”, “aproveite agora”)  
+    - agradecimentos      
+    - chamadas de ação (ex.: “comenta”, “garanta sua vaga”, “último lote”, “aproveite agora”)  
     - textos aspiracionais ou emocionais  
     - storytelling, personagens fictícios, metáforas ou dramatização  
     - memes ou conteúdo humorístico  
@@ -176,11 +175,10 @@ contendo:
 - a operação prática demonstrada
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
 - considere somente o que for estritamente técnico dentro do título ou da descrição
-- NÃO utilize informações provenientes de hashtags para compor a sinopse
 - a sinopse SÓ deve ser gerada se o foco principal do título e da descrição for técnico
 
-Se o foco principal do título e da descrição for promocional, aspiracional ou de evento,
-NÃO gere sinopse técnica.
+Se o foco principal do título e da descrição for promocional, aspiracional, anúncios de curso/bootcamp,
+NÃO gere sinopse técnica e responda só inválido.
 
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
 
@@ -586,6 +584,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
