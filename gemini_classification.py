@@ -176,13 +176,10 @@ contendo:
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
 - considere somente o que for estritamente técnico dentro do título ou da descrição
 - a sinopse SÓ deve ser gerada se o foco principal do título e da descrição for técnico
+- se o foco principal do título e da descrição for promocional, aspiracional, anúncio de curso, bootcamp, evento ou venda, NÃO gere sinopse técnica e responda apenas: "invalido"
 
-Se o foco principal do título e da descrição for promocional, aspiracional, anúncios de curso/bootcamp,
-NÃO gere sinopse técnica e responda só inválido.
 
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
-
-AGORA GERE A SINOPSE TÉCNICA BASEADA NOS DADOS DO VÍDEO.
 """
         
         try:            
@@ -584,6 +581,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
