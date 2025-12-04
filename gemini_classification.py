@@ -178,7 +178,6 @@ contendo:
 - a sinopse SÓ deve ser gerada se o foco principal do título e da descrição for técnico
 - se o foco principal do título e da descrição for promocional, aspiracional, anúncio de curso, bootcamp, evento ou venda, NÃO gere sinopse técnica e responda apenas: "invalido"
 
-
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
 """
         
@@ -581,6 +580,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
