@@ -126,17 +126,15 @@ Gerar um resumo técnico confiável, eliminando completamente ruídos promociona
 ======================================================
 REGRAS ABSOLUTAS
 ======================================================
-1. **Não invente tecnologias.**  
-   Só cite ferramentas, bibliotecas, frameworks ou conceitos SE estiverem
-   explicitamente presentes no título ou descrição (que não sejam partes de trechos a serem ignorados).
+1. **Não invente tecnologias.**     
 
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
     - links  
     - redes sociais     
     - emojis  
     - hashtags 
-    - agradecimentos      
-    - chamadas de ação (ex.: “comenta”, “garanta sua vaga”, “último lote”, “aproveite agora”)  
+    - agradecimentos     
+    - chamadas de ação (ex.: “comente”, “garanta sua vaga”, “último lote”, “aproveite agora”)  
     - textos aspiracionais ou emocionais  
     - storytelling, personagens fictícios, metáforas ou dramatização  
     - memes ou conteúdo humorístico  
@@ -170,11 +168,11 @@ Produza **apenas um parágrafo de sinopse técnica**, com no máximo 5–10 linh
 contendo:
 
 - a ferramenta principal citada
-- subferramentas / bibliotecas mencionadas
 - conceitos técnicos centrais que o vídeo explica
 - a operação prática demonstrada
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
 - considere somente o que for estritamente técnico dentro do título ou da descrição
+- NÃO utilize informações provenientes de hashtags para compor a sinopse
 - A sinopse deve ser gerada SEMPRE que o título ou a descrição indicarem,
   de forma clara, que o vídeo irá abordar uma tecnologia, conceito
   ou processo técnico específico, mesmo que não descreva a execução em detalhes.
@@ -585,6 +583,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
