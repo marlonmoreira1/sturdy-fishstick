@@ -134,7 +134,7 @@ REGRAS ABSOLUTAS
     - links  
     - redes sociais     
     - emojis  
-    - hashtags (textos/trechos que iniciem com #)
+    - hashtags 
     - agradecimentos  
     - textos motivacionais  
     - chamadas de ação (ex.: “comente”, “garanta sua vaga”, “último lote”, “aproveite agora”)  
@@ -145,13 +145,7 @@ REGRAS ABSOLUTAS
     - promoções, Black Friday, descontos, lotes, vagas limitadas  
     - conteúdos sobre carreira, sucesso, mentalidade ou trajetória profissional  
     - reviews, opiniões ou comparações de cursos, plataformas ou comunidades  
-    - vlogs, rotina, bastidores ou vida pessoal
-
-    Esses elementos **NUNCA caracterizam conteúdo técnico**, mesmo que mencionem
-    nomes de tecnologias, linguagens, frameworks ou ferramentas.
-    Essas partes devem ser completamente desconsideradas antes de gerar a sinopse
-    e não podem influenciar na interpretação técnica do conteúdo.     
- 
+    - vlogs, rotina, bastidores ou vida pessoal         
 
 3. O nome do canal **NUNCA é prova** de qual tecnologia o vídeo usa.  
    Use-o apenas como reforço contextual (ex.: canal dedicado a Excel → reforça, mas não prova).
@@ -182,6 +176,11 @@ contendo:
 - a operação prática demonstrada
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
 - considere somente o que for estritamente técnico dentro do título ou da descrição
+- NÃO utilize informações provenientes de hashtags para compor a sinopse
+- a sinopse SÓ deve ser gerada se o foco principal do título e da descrição for técnico
+
+Se o foco principal do título e da descrição for promocional, aspiracional ou de evento,
+NÃO gere sinopse técnica.
 
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
 
@@ -587,6 +586,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
