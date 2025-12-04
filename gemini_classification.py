@@ -269,7 +269,6 @@ Use seu conhecimento prévio para identificar relações entre ferramentas e sua
 - Classifique sempre no nível da TECNOLOGIA PRINCIPAL (não o comando ou conceito).
 - Evite conceitos abstratos (loops, algoritmos, ponteiros).
 - Se o vídeo ensinar uma funcionalidade de uma tecnologia, classifique pela tecnologia.
-- Se houver dúvida entre duas, escolha a mais abrangente.
 - Utilize inferência técnica para relacionar ferramentas e ecossistemas.
 
 **RESPONDA APENAS COM JSON (sem markdown, sem explicações):**
@@ -583,6 +582,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
