@@ -253,7 +253,7 @@ seguindo exclusivamente a lista de tecnologias aceitas do sistema.
 
 **LISTA TECNOLOGIAS ACEITAS (use EXATAMENTE estes nomes):**
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
-React | Angular | Vue | Next.js | Node.js | Spring Boot | FastAPI | Express | GraphQL | Flutter | Tailwind CSS | Jetpack Compose | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
+React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Jetpack Compose | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
 Machine Learning | Deep Learning 
 MongoDB
 Linux
@@ -264,7 +264,7 @@ RabbitMQ | Kafka
 JWT | OAuth2
 Prometheus 
 Xcode | SwiftUI | React Native
-Git | REST APIs | Cypress | Postman | REST APIs | Selenium | Cypress | JUnit | Espresso | JMeter
+Git | REST APIs | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 
 ---
 
@@ -600,6 +600,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
