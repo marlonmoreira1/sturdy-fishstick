@@ -151,8 +151,6 @@ REGRAS ABSOLUTAS
 
 5. A sinopse deve ser 100% técnica, objetiva e orientada ao que é ENSINADO no vídeo.
 
-6. Se houver ambiguidade, escolha SEMPRE a interpretação mais específica sustentada pelo texto.
-
 ======================================================
 ENTRADAS DO VÍDEO
 ======================================================
@@ -582,6 +580,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
