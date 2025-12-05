@@ -152,7 +152,7 @@ REGRAS ABSOLUTAS
 5. A sinopse deve ser 100% técnica, objetiva e orientada ao que é ENSINADO no vídeo.
 
 6. **Palavras soltas não caracterizam ensino técnico.**
-   Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
+   Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
 
 7. **Hashtags NUNCA podem ser usadas como base semântica.**
    Se a tecnologia ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
@@ -597,6 +597,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
