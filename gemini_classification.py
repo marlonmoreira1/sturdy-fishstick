@@ -149,7 +149,7 @@ REGRAS ABSOLUTAS
 
 4. Nunca classifique trilha, não classifique ferramenta final, não gere JSON.
 
-5. A sinopse deve ser 100% técnica, objetiva e orientada ao que é ENSINADO no vídeo.
+5. A sinopse deve ser 100% técnica, objetiva e oexplicitamente sustentadas pelo título ou pela descrição.
 
 6. **Palavras soltas não caracterizam ensino técnico.**
    Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
@@ -186,7 +186,8 @@ SAÍDA OBRIGATÓRIA (EM JSON)
 ======================================================
 
 Produza **apenas um parágrafo de sinopse técnica**, com no máximo 5–10 linhas,
-contendo:
+contendo exclusivamente informações que sejam **explicitamente sustentadas
+pelo título ou pela descrição**, incluindo:
 
 - a ferramenta principal citada
 - conceitos técnicos centrais que o vídeo explica
@@ -195,6 +196,8 @@ contendo:
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
 - considere somente o que for estritamente técnico dentro do título ou da descrição
 
+Se qualquer um desses itens **não estiver claramente indicado no título ou na descrição**,
+ele **não deve ser inferido, deduzido ou estimado**.
 
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
 """
@@ -597,6 +600,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
