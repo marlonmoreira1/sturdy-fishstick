@@ -244,7 +244,7 @@ AWS | Azure Data Factory | GCP Dataflow
 Excel | Power BI | Tableau | Grafana
 RabbitMQ | Kafka
 JWT | OAuth2
-Prometheus | Grafana
+Prometheus 
 Xcode | SwiftUI | React Native
 Git | REST APIs | Cypress | Postman | REST APIs | Selenium | Cypress | JUnit | Espresso | JMeter
 
@@ -582,6 +582,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
