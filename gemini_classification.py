@@ -169,6 +169,11 @@ REGRAS ABSOLUTAS
 9. **Lives sem escopo educacional explícito são inválidas.**
    Se o vídeo for uma live de desenvolvimento, mas o título e a descrição NÃO informarem claramente qual técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
 
+10. **Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
+    será abordado no vídeo**, sendo compostos apenas por linguagem promocional,
+    aspiracional, anúncios de curso, bootcamp, evento ou venda,
+    responda obrigatoriamente: **"invalido"**.
+
 ======================================================
 ENTRADAS DO VÍDEO
 ======================================================
@@ -186,12 +191,10 @@ contendo:
 - a ferramenta principal citada
 - conceitos técnicos centrais que o vídeo explica
 - a operação prática demonstrada
+- o tipo de atividade técnica realizada
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
 - considere somente o que for estritamente técnico dentro do título ou da descrição
-- Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
-  será abordado no vídeo, sendo compostos apenas por linguagem promocional,
-  aspiracional, anúncios de curso, bootcamp, evento ou venda,
-  responda apenas: "invalido".
+
 
 O texto deve parecer uma descrição de conteúdo feita por um analista técnico.
 """
@@ -594,6 +597,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
