@@ -149,7 +149,7 @@ REGRAS ABSOLUTAS
 
 4. Nunca classifique trilha, não classifique ferramenta final, não gere JSON.
 
-5. A sinopse deve ser 100% técnica, objetiva e oexplicitamente sustentadas pelo título ou pela descrição.
+5. A sinopse deve ser 100% técnica, objetiva e explicitamente sustentadas pelo título ou pela descrição.
 
 6. **Palavras soltas não caracterizam ensino técnico.**
    Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
@@ -600,6 +600,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
