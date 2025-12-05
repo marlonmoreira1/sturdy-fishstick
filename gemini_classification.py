@@ -151,6 +151,24 @@ REGRAS ABSOLUTAS
 
 5. A sinopse deve ser 100% técnica, objetiva e orientada ao que é ENSINADO no vídeo.
 
+6. **Palavras soltas não caracterizam ensino técnico.**
+   Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
+
+7. **Hashtags NUNCA podem ser usadas como base semântica.**
+   Se a tecnologia ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
+
+8. **Se o título e a descrição não descreverem explicitamente um conteúdo educacional técnico**, como:
+   - explicação de conceito,
+   - demonstração de procedimento,
+   - implementação passo a passo,
+   - técnica ensinada,
+   - operação implementada,
+   - resolução de problema técnico,
+   então responda obrigatoriamente: **"invalido"**.
+
+9. **Lives sem escopo educacional explícito são inválidas.**
+   Se o vídeo for uma live de desenvolvimento, mas o título e a descrição NÃO informarem claramente qual técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
+
 ======================================================
 ENTRADAS DO VÍDEO
 ======================================================
@@ -170,10 +188,6 @@ contendo:
 - a operação prática demonstrada
 - qualquer detalhe técnico que ajude o classificador a entender "o que está sendo ensinado"
 - considere somente o que for estritamente técnico dentro do título ou da descrição
-- NÃO utilize informações provenientes de hashtags para compor a sinopse
-- A sinopse deve ser gerada SEMPRE que o título ou a descrição indicarem,
-  de forma clara, que o vídeo irá abordar uma tecnologia, conceito
-  ou processo técnico específico, mesmo que não descreva a execução em detalhes.
 - Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
   será abordado no vídeo, sendo compostos apenas por linguagem promocional,
   aspiracional, anúncios de curso, bootcamp, evento ou venda,
@@ -580,6 +594,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
