@@ -7,6 +7,71 @@ jobs:
   run-pipeline:
     runs-on: ubuntu-latest
 
+    strategy:
+      # matrix will contain 20 items; see below (you'll paste/generated list)
+      matrix:
+        include:
+          - start: 0
+            end: 3
+            gemini_secret: GEMINI_API_KEY
+          - start: 3
+            end: 6
+            gemini_secret: GEMINI_API_KEY
+          - start: 6
+            end: 9
+            gemini_secret: GEMINI_API_KEY
+          - start: 9
+            end: 12
+            gemini_secret: GEMINI_API_KEY
+          - start: 12
+            end: 15
+            gemini_secret: GEMINI_API_KEY_JORGE
+          - start: 15
+            end: 18
+            gemini_secret: GEMINI_API_KEY_JORGE
+          - start: 18
+            end: 21
+            gemini_secret: GEMINI_API_KEY_JORGE
+          - start: 21
+            end: 24
+            gemini_secret: GEMINI_API_KEY_JORGE
+          - start: 24
+            end: 27
+            gemini_secret: GEMINI_API_KEY_WADE
+          - start: 27
+            end: 30
+            gemini_secret: GEMINI_API_KEY_WADE
+          - start: 30
+            end: 33
+            gemini_secret: GEMINI_API_KEY_WADE
+          - start: 33
+            end: 36
+            gemini_secret: GEMINI_API_KEY_WADE
+          - start: 36
+            end: 40
+            gemini_secret: GEMINI_API_KEY_MARCUS
+          - start: 3250
+            end: 3500
+            gemini_secret: GEMINI_API_KEY_MARCUS
+          - start: 40
+            end: 43
+            gemini_secret: GEMINI_API_KEY_MARCUS
+          - start: 43
+            end: 46
+            gemini_secret: GEMINI_API_KEY_MARCUS
+          - start: 46
+            end: 50
+            gemini_secret: GEMINI_API_KEY_JONATAN
+          - start: 4250
+            end: 4500
+            gemini_secret: GEMINI_API_KEY_JONATAN
+          - start: 50
+            end: 53
+            gemini_secret: GEMINI_API_KEY_JONATAN
+          - start: 53
+            end: 56
+            gemini_secret: GEMINI_API_KEY_JONATAN
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -31,9 +96,11 @@ jobs:
 
     - name: Run ETL script
       env:
+        START_INDEX: ${{ matrix.start }}
+        END_INDEX:   ${{ matrix.end }}
         STORAGE_KEY: ${{ secrets.STORAGE_KEY }}        
         API_KEY: ${{ secrets.API_KEY }}
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets[matrix.gemini_secret] }}
         
       run: |
         python gemini_classification.py
