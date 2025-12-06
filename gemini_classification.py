@@ -15,11 +15,11 @@ import os
 # FUNÇÕES
 # ============================================
 
-def carregar_canais(csv_path, limite=2500):
+def carregar_canais(csv_path, start=0, end=None):
     """Carrega canais do CSV"""
     df = pd.read_csv(csv_path, sep=';')
     print(f"Total de canais no CSV: {len(df)}")
-    df_teste = df.head(limite)
+    df_teste = df.iloc[start:end]
     print(f"Usando {len(df_teste)} canais para teste")
     return df_teste
 
@@ -506,7 +506,7 @@ def upload_df_to_gcs_raw(df, bucket_name, filename):
 # PIPELINE PRINCIPAL
 # ============================================
 
-def executar_teste(csv_path, youtube_api_key, gemini_api_key):
+def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     """Executa teste completo"""
     
     print("=" * 70)
@@ -566,7 +566,8 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key):
     df_classificado_trilha = classificar_trilhas_groq(df_classificado,gemini_api_key)
     
     # 7. Salvar resultado final
-    upload_df_to_gcs_raw(df_classificado_trilha, 'video_bruto', 'classificados.csv')
+    output_filename = f"classificados_{START}_{END}.csv"
+    upload_df_to_gcs_raw(df_classificado_trilha, 'video_bruto', output_filename)
     print(f"\n✅ Resultado final salvo: videos_classificados_adonis.csv")
     
     # 8. Resumo
@@ -590,9 +591,13 @@ if __name__ == "__main__":
     CSV_PATH = 'datasets/canais_tech_BR.csv'
     YOUTUBE_API_KEY = os.environ['API_KEY']
     GEMINI_API_KEY = os.environ['GEMINI_API_KEY']
+
+    START = os.environ['START_INDEX']
+    END = os.environ['END_INDEX']
+    
     # GROQ_API_KEY = os.environ['GROQ_API_KEY']
     # Executar teste
-    df_resultado = executar_teste(CSV_PATH, YOUTUBE_API_KEY, GEMINI_API_KEY)
+    df_resultado = executar_teste(CSV_PATH, YOUTUBE_API_KEY, GEMINI_API_KEY, START, END)
     
     # Ver alguns resultados
     print("\n" + "=" * 70)
@@ -600,6 +605,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
