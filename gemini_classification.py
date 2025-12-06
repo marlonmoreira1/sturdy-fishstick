@@ -284,10 +284,21 @@ Use seu conhecimento prévio para identificar relações entre ferramentas e sua
 
 
 🎯 REGRAS:
-- Classifique sempre no nível da TECNOLOGIA PRINCIPAL (não o comando ou conceito).
-- Evite conceitos abstratos (loops, algoritmos, ponteiros).
-- Se o vídeo ensinar uma funcionalidade de uma tecnologia, classifique pela tecnologia.
-- Utilize inferência técnica para relacionar ferramentas e ecossistemas.
+1. Quando mais de uma tecnologia for explicitamente citada na sinopse,
+   a ferramenta principal DEVE ser aquela responsável pela AÇÃO CENTRAL
+   executada no vídeo, e não a tecnologia estrutural de suporte.
+
+2. Classifique sempre no nível da TECNOLOGIA PRINCIPAL
+   (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
+
+3. Se o vídeo ensinar uma funcionalidade de uma tecnologia,
+   classifique pela tecnologia responsável diretamente por essa funcionalidade.
+
+4. Evite classificar conceitos abstratos
+   (loops, algoritmos, ponteiros, estruturas conceituais).
+
+5. Utilize inferência técnica apenas para relacionar ferramentas
+   a suas tecnologias base quando isso for inevitável.
 
 **RESPONDA APENAS COM JSON (sem markdown, sem explicações):**
 
@@ -611,6 +622,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
