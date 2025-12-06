@@ -553,6 +553,8 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     # print(f"✅ Vídeos salvos: videos_coletados_terca.csv")
     
     # df_filtrado = pd.read_csv('videos_coletados_1000.csv',sep=';', encoding='utf-8')
+
+    df_filtrado = df_filtrado[df_filtrado['likeCount'] > 25]
     
     # 6. Classificar 100 vídeos
     print(f"\n{'=' * 70}")
@@ -560,10 +562,14 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     print("=" * 70)
 
     df_contextualizado = contextualizar_videos_groq(df_filtrado, gemini_api_key, limite=100)
+
+    df_contextualizado = df_contextualizado[df_contextualizado['contexto']!='invalido']
     
     df_classificado = classificar_videos_groq(df_contextualizado, gemini_api_key, limite=100)
 
     df_classificado_trilha = classificar_trilhas_groq(df_classificado,gemini_api_key)
+
+    df_classificado_trilha = df_classificado_trilha[df_classificado_trilha['topico_trilha']!='invalido']
     
     # 7. Salvar resultado final
     output_filename = f"classificados_{START}_{END}.csv"
@@ -605,6 +611,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
