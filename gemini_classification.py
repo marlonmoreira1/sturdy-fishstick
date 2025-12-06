@@ -592,8 +592,8 @@ if __name__ == "__main__":
     YOUTUBE_API_KEY = os.environ['API_KEY']
     GEMINI_API_KEY = os.environ['GEMINI_API_KEY']
 
-    START = os.environ['START_INDEX']
-    END = os.environ['END_INDEX']
+    START = int(os.environ['START_INDEX'])
+    END   = int(os.environ['END_INDEX'])
     
     # GROQ_API_KEY = os.environ['GROQ_API_KEY']
     # Executar teste
@@ -605,6 +605,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
