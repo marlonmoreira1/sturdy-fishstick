@@ -289,9 +289,9 @@ Use seu conhecimento prévio para identificar relações entre ferramentas e sua
 
 
 🎯 REGRAS:
-1. Quando mais de uma tecnologia for explicitamente citada na sinopse,
-   a ferramenta principal DEVE ser aquela responsável pela AÇÃO CENTRAL
-   executada no vídeo, e não a tecnologia estrutural de suporte.
+1. Quando mais de uma tecnologia da lista for citada na sinopse, a ferramenta principal DEVE
+   ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
+   está sendo diretamente ensinada.
 
 2. Classifique sempre no nível da TECNOLOGIA PRINCIPAL
    (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
@@ -627,6 +627,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
