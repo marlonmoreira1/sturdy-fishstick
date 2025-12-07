@@ -153,15 +153,13 @@ REGRAS ABSOLUTAS
 
 4. Nunca classifique trilha, não classifique ferramenta final, não gere JSON.
 
-5. A sinopse deve ser 100% técnica, objetiva e explicitamente sustentadas pelo título ou pela descrição.
-
-6. **Palavras soltas não caracterizam ensino técnico.**
+5. **Palavras soltas não caracterizam ensino técnico.**
    Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
 
-7. **Hashtags NUNCA podem ser usadas como base semântica.**
+6. **Hashtags NUNCA podem ser usadas como base semântica.**
    Se a tecnologia ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
 
-8. **Se o título e a descrição não descreverem explicitamente um conteúdo educacional técnico**, como:
+7. **Se o título e a descrição não descreverem explicitamente um conteúdo educacional técnico**, como:
    - explicação de conceito,
    - demonstração de procedimento,
    - implementação passo a passo,
@@ -170,15 +168,15 @@ REGRAS ABSOLUTAS
    - resolução de problema técnico,
    então responda obrigatoriamente: **"invalido"**.
 
-9. **Lives sem escopo educacional explícito são inválidas.**
+8. **Lives sem escopo educacional explícito são inválidas.**
    Se o vídeo for uma live de desenvolvimento, mas o título e a descrição NÃO informarem claramente qual técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
 
-10. **Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
+9. **Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
     será abordado no vídeo**, sendo compostos apenas por linguagem promocional,
     aspiracional, anúncios de curso, bootcamp, evento ou venda,
     responda obrigatoriamente: **"invalido"**.
 
-11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
+10. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
     bootcamp, evento ou trilha como complemento técnico do vídeo.
 
 ======================================================
@@ -189,7 +187,7 @@ Descrição: {row['description'] if row['description'] else 'Sem descrição'}
 Nome do canal: {row['channel_name']}
 
 ======================================================
-SAÍDA OBRIGATÓRIA (EM JSON)
+SAÍDA OBRIGATÓRIA
 ======================================================
 
 Produza **apenas um parágrafo de sinopse técnica**, com no máximo 5–10 linhas,
@@ -629,6 +627,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
