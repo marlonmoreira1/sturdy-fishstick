@@ -130,7 +130,11 @@ REGRAS ABSOLUTAS
 
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
     - links  
-    - redes sociais     
+    - redes sociais
+    - cursos
+    - eventos
+    - promoções
+    - reviews     
     - emojis  
     - hashtags 
     - agradecimentos     
@@ -173,6 +177,9 @@ REGRAS ABSOLUTAS
     será abordado no vídeo**, sendo compostos apenas por linguagem promocional,
     aspiracional, anúncios de curso, bootcamp, evento ou venda,
     responda obrigatoriamente: **"invalido"**.
+
+11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
+    bootcamp, evento ou trilha como complemento técnico do vídeo.
 
 ======================================================
 ENTRADAS DO VÍDEO
@@ -622,6 +629,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
