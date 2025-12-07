@@ -12,19 +12,19 @@ jobs:
       matrix:
         include:
           - start: 0
-            end: 1
+            end: 10
             gemini_secret: GEMINI_API_KEY
-          - start: 1
-            end: 2
+          - start: 10
+            end: 20
             gemini_secret: GEMINI_API_KEY_MARCUS
-          - start: 2
-            end: 3
+          - start: 20
+            end: 30
             gemini_secret: GEMINI_API_KEY_JONATAN
-          - start: 3
-            end: 4
+          - start: 30
+            end: 40
             gemini_secret: GEMINI_API_KEY_WADE
-          - start: 4
-            end: 5
+          - start: 40
+            end: 50
             gemini_secret: GEMINI_API_KEY_JORGE
           
 
