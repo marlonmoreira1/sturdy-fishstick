@@ -171,12 +171,15 @@ REGRAS ABSOLUTAS
 8. **Lives sem escopo educacional explícito são inválidas.**
    Se o vídeo for uma live de desenvolvimento, mas o título e a descrição NÃO informarem claramente qual técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
 
-9. **Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
+9. **Conteúdos genéricos de curso, playlist, canal, formação, bootcamp, evento, roadmap, conselho, carreira ou trilha são inválidos.**
+    Se o título e a descrição se apoiarem APENAS nesse tipo de informação e NÃO descreverem claramente qual técnica, processo, operação, implementação, resolução de problema ou conceito técnico está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
+
+10. **Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
     será abordado no vídeo**, sendo compostos apenas por linguagem promocional,
     aspiracional, anúncios de curso, bootcamp, evento ou venda,
     responda obrigatoriamente: **"invalido"**.
 
-10. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
+11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
     bootcamp, evento ou trilha como complemento técnico do vídeo.
 
 ======================================================
@@ -630,6 +633,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
