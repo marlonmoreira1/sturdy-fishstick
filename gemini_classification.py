@@ -585,7 +585,7 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
 
     df_classificado_trilha = classificar_trilhas_groq(df_classificado,gemini_api_key)
 
-    df_classificado_trilha = df_classificado_trilha[df_classificado_trilha['topico_trilha']!='invalido']
+    df_classificado_trilha = df_classificado_trilha[~df_classificado_trilha['topico_trilha'].isin(['invalido','sem_trilha'])]
     
     # 7. Salvar resultado final
     output_filename = f"classificados_{START}_{END}.csv"
@@ -627,6 +627,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
