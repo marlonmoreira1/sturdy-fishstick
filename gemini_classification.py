@@ -190,7 +190,7 @@ Nome do canal: {row['channel_name']}
 SAÍDA OBRIGATÓRIA
 ======================================================
 
-Produza **apenas um parágrafo de sinopse técnica**, com no máximo 5–10 linhas,
+Produza **apenas um parágrafo de sinopse técnica**,
 contendo exclusivamente informações que sejam **explicitamente sustentadas
 pelo título ou pela descrição**, incluindo:
 
@@ -317,6 +317,9 @@ Use seu conhecimento prévio para identificar relações entre ferramentas e sua
 Se a sinopse técnica não fornecer nenhum termo técnico
 ou pista inequívoca que identifique uma ferramenta da lista,
 a classificação DEVE ser "invalido".
+
+Internamente, identifique qual tecnologia realiza a ação técnica central descrita no vídeo.
+Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
         try:
@@ -627,6 +630,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
