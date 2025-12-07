@@ -446,11 +446,10 @@ REGRAS ABSOLUTAS (SIGA À RISCA)
 1. Classifique somente com base na sinopse.
 2. Não invente tópicos.
 3. A sinopse já removeu tudo que é ruído — confie nela.
-4. Se dois tópicos forem possíveis, escolha sempre o mais específico.
-5. Classificar quando a sinopse descreve exatamente o que o tópico aborda.
-6. Classificar quando há palavras-chave técnicas explícitas compatíveis.
-7. Quando a sinopse descrever uma ação, prática ou explicação que se encaixa de forma natural em um tópico (mesmo sem match literal), você DEVE classificar.
-8. Só retorne "invalido" quando NÃO houver relação técnica plausível com NENHUM dos tópicos.
+4. Classificar quando a sinopse descreve exatamente o que o tópico aborda.
+5. Classificar quando há palavras-chave técnicas explícitas compatíveis.
+6. Quando a sinopse descrever uma ação, prática ou explicação que se encaixa de forma natural em um tópico (mesmo sem match literal), você DEVE classificar.
+7. Só retorne "invalido" quando NÃO houver relação técnica plausível com NENHUM dos tópicos.
 
 
 ==================================================
@@ -633,6 +632,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
