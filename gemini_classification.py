@@ -314,7 +314,8 @@ Use seu conhecimento prévio para identificar relações entre ferramentas e sua
     "ferramenta_principal": "nome_exato_da_lista_ou_invalido",
     "tecnologia_base": "tecnologia_mais_ampla_ou_ecossistema_da_lista",
     "confianca": "alta/media/baixa",
-    "categoria": "linguagem/framework/sistema_operacional/banco_dados/cloud/bi_analytics/outra"
+    "cargo": "front-end | back-end | fullstack | devops | qa | analista de dados | engenheiro de dados | cientista de dados | analista de bi | android | ios | invalido",
+    "tipo_video": "projeto | aula | invalido"
 }}
 
 Se a sinopse técnica não fornecer nenhum termo técnico
@@ -632,6 +633,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
