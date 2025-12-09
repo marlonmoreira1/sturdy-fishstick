@@ -261,10 +261,10 @@ seguindo exclusivamente a lista de tecnologias aceitas do sistema.
 3. NUNCA invente ou presuma tecnologias não mencionadas
 
 
-**LISTA TECNOLOGIAS ACEITAS (use EXATAMENTE estes nomes):**
+**LISTA FERRAMENTAS ACEITAS (use EXATAMENTE estes nomes):**
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
 React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Jetpack Compose | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
-Machine Learning | Deep Learning 
+Machine Learning | Deep Learning | Model Context Protocol (MCP)
 MongoDB
 Linux
 Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
@@ -284,7 +284,9 @@ Sinopse Técnica: {row['contexto']}
 ---
 
 🧠 INFERÊNCIA PERMITIDA:
-Use seu conhecimento prévio para identificar relações entre ferramentas e suas tecnologias base
+Inferência só é permitida para ligar uma ferramenta explicitamente citada na sinopse
+a sua tecnologia base quando essa relação é direta, oficial e inevitável
+E quando essa tecnologia aparece na lista de ferramentas aceitas.
 - BullMQ → roda em Node.js → tecnologia_base: Node.js
 - Pandas → biblioteca Python → tecnologia_base: Python
 - DAX → linguagem do Power BI → tecnologia_base: Power BI
@@ -294,7 +296,7 @@ Use seu conhecimento prévio para identificar relações entre ferramentas e sua
 
 
 🎯 REGRAS:
-1. Quando mais de uma tecnologia da lista for citada na sinopse, a ferramenta principal DEVE
+1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
    ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
    está sendo diretamente ensinada.
 
@@ -320,11 +322,13 @@ Use seu conhecimento prévio para identificar relações entre ferramentas e sua
     "tipo_video": "projeto | aula | invalido"
 }}
 
-Se a sinopse técnica não fornecer nenhum termo técnico
-ou pista inequívoca que identifique uma ferramenta da lista,
-a classificação DEVE ser "invalido".
+LEMBRETE FINAL:
+- Você NÃO PODE criar novas ferramentas
+- Se não houver correspondência clara, responda "invalido".
+- Se a sinopse for genérica demais (ex: motivacional, opinião,
+   apresentação, dicas vagas, cursos, lives), classifique como "invalido".
 
-Internamente, identifique qual tecnologia realiza a ação técnica central descrita no vídeo.
+Internamente, identifique qual ferramenta realiza a ação técnica central descrita no vídeo.
 Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
@@ -635,6 +639,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
