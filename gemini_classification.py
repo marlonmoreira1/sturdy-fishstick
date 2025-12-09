@@ -296,12 +296,9 @@ Exemplos válidos:
 - VBA → roda em excel → tecnologia_base: Excel
 
 ❌ Inferência não permitida:
-- Supondo tecnologia porque o tema é “programação”
-- Supondo linguagem por hábito da comunidade
-- Supondo ferramenta porque aparece em hashtags
-- Supondo stack por ser “sobre programadores”
-- Supondo framework por ser “um app”
-- Supondo qualquer coisa que não esteja presente na sinopse
+Supor qualquer coisa que não esteja presente na sinopse
+Se a relação não for explícita na sinopse OU não for uma ligação técnica clara e oficial,
+então isso é chute, e você deve NÃO inferir.
 
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
@@ -647,6 +644,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
