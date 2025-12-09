@@ -121,12 +121,12 @@ Sua função é ler o título, descrição e nome do canal e produzir uma sinops
 ======================================================
 OBJETIVO
 ======================================================
-Gerar um resumo técnico confiável, eliminando completamente ruídos promocionais e elementos irrelevantes, deixando apenas os dados úteis para que modelos futuros consigam classificar corretamente qual tecnologia e operação o vídeo ensina.
+Gerar um resumo técnico confiável, eliminando completamente ruídos promocionais e elementos irrelevantes, deixando apenas os dados úteis para que modelos futuros consigam classificar corretamente qual ferramenta e operação o vídeo ensina.
 
 ======================================================
 REGRAS ABSOLUTAS
 ======================================================
-1. **Não invente tecnologias.**     
+1. **Não invente ferramentas.**     
 
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
     - links  
@@ -138,7 +138,7 @@ REGRAS ABSOLUTAS
     - emojis  
     - hashtags 
     - agradecimentos     
-    - chamadas de ação (ex.: “comente”, “garanta sua vaga”, “último lote”, “aproveite agora”)  
+    - chamadas de ação (ex.: "comente", "garanta sua vaga", "último lote", "aproveite agora", "cupom de desconto", "seu ingresso", "inscreva-se")  
     - textos aspiracionais ou emocionais  
     - storytelling, personagens fictícios, metáforas ou dramatização  
     - memes ou conteúdo humorístico  
@@ -148,7 +148,7 @@ REGRAS ABSOLUTAS
     - reviews, opiniões ou comparações de cursos, plataformas ou comunidades  
     - vlogs, rotina, bastidores ou vida pessoal         
 
-3. O nome do canal **NUNCA é prova** de qual tecnologia o vídeo usa.  
+3. O nome do canal **NUNCA é prova** de qual ferramenta o vídeo usa.  
    Use-o apenas como reforço contextual (ex.: canal dedicado a Excel → reforça, mas não prova).
 
 4. Nunca classifique trilha, não classifique ferramenta final, não gere JSON.
@@ -157,7 +157,7 @@ REGRAS ABSOLUTAS
    Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
 
 6. **Hashtags NUNCA podem ser usadas como base semântica.**
-   Se a tecnologia ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
+   Se a ferramenta ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
 
 7. **Se o título e a descrição não descreverem explicitamente um conteúdo educacional técnico**, como:
    - explicação de conceito,
@@ -166,13 +166,14 @@ REGRAS ABSOLUTAS
    - técnica ensinada,
    - operação implementada,
    - resolução de problema técnico,
+   - ferramenta utilizada,
    então responda obrigatoriamente: **"invalido"**.
 
 8. **Lives sem escopo educacional explícito são inválidas.**
-   Se o vídeo for uma live de desenvolvimento, mas o título e a descrição NÃO informarem claramente qual técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
+   Se o vídeo for uma live de desenvolvimento, mas o título e a descrição NÃO informarem claramente qual ferramenta, técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
 
-9. **Curso, formação, bootcamp, evento, roadmap, conselho, carreira ou trilha sem escopo educacional explícito são inválidos.**
-    Se o vídeo for algum desses, mas título e a descrição se apoiarem APENAS nesse tipo de informação e NÃO descreverem claramente qual técnica, processo, operação, implementação, resolução de problema ou conceito técnico está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
+9. **Cursos sem escopo educacional explícito são inválidos.**
+    Se o vídeo for um curso, mas o título e a descrição NÃO informarem claramente qual ferramenta, técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
 
 10. **Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
     será abordado no vídeo**, sendo compostos apenas por linguagem promocional,
@@ -633,6 +634,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
