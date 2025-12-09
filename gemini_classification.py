@@ -287,6 +287,7 @@ Sinopse Técnica: {row['contexto']}
 Inferência só é permitida para ligar uma ferramenta explicitamente citada na sinopse
 a sua tecnologia base quando essa relação é direta, oficial e inevitável
 E quando essa tecnologia aparece na lista de ferramentas aceitas.
+Exemplos válidos:
 - BullMQ → roda em Node.js → tecnologia_base: Node.js
 - Pandas → biblioteca Python → tecnologia_base: Python
 - DAX → linguagem do Power BI → tecnologia_base: Power BI
@@ -294,6 +295,13 @@ E quando essa tecnologia aparece na lista de ferramentas aceitas.
 - Express → framework Node.js → tecnologia_base: Node.js
 - VBA → roda em excel → tecnologia_base: Excel
 
+❌ Inferência não permitida:
+- Supondo tecnologia porque o tema é “programação”
+- Supondo linguagem por hábito da comunidade
+- Supondo ferramenta porque aparece em hashtags
+- Supondo stack por ser “sobre programadores”
+- Supondo framework por ser “um app”
+- Supondo qualquer coisa que não esteja presente na sinopse
 
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
@@ -639,6 +647,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
