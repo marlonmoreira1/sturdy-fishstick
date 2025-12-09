@@ -253,12 +253,12 @@ def classificar_videos_groq(df, groq_api_key, limite=100):
 
 **OBJETIVO:**
 Extrair a FERRAMENTA PRINCIPAL ensinada no vídeo da sinopse técnica fornecida,
-seguindo exclusivamente a lista de tecnologias aceitas do sistema.
+seguindo exclusivamente a lista de ferramentas aceitas do sistema.
 
 **REGRAS CRÍTICAS:**
 1. Use SOMENTE o que está explícito na sinopse.
-2. NÃO invente tecnologias.
-3. NUNCA invente ou presuma tecnologias não mencionadas
+2. NÃO invente ferramentas.
+3. NUNCA invente ou presuma ferramentas não mencionadas
 
 
 **LISTA FERRAMENTAS ACEITAS (use EXATAMENTE estes nomes):**
@@ -327,7 +327,7 @@ Exemplos válidos:
     "tecnologia_base": "tecnologia_mais_ampla_ou_ecossistema_da_lista",
     "confianca": "alta/media/baixa",
     "cargo": "front-end | back-end | fullstack | devops | qa | analista de dados | engenheiro de dados | cientista de dados | analista de bi | android | ios | invalido",
-    "tipo_video": "projeto | aula | invalido"
+    "tipo_video": "projeto | aula | curso | invalido"
 }}
 
 LEMBRETE FINAL:
@@ -647,6 +647,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
