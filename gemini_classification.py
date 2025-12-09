@@ -159,21 +159,22 @@ REGRAS ABSOLUTAS
 6. **Hashtags NUNCA podem ser usadas como base semântica.**
    Se a ferramenta ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
 
-7. **Se o título e a descrição não descreverem explicitamente um conteúdo educacional técnico**, como:
-   - explicação de conceito,
-   - demonstração de procedimento,
-   - implementação passo a passo,
-   - técnica ensinada,
-   - operação implementada,
-   - resolução de problema técnico,
-   - ferramenta utilizada,
-   então responda obrigatoriamente: **"invalido"**.
+7. Para que um vídeo seja válido, o título e a descrição devem apresentar evidência suficiente para identificar a FERRAMENTA PRINCIPAL.
+   Essa evidência só existe quando a ferramenta aparece combinada com pelo menos um segundo elemento técnico
+   (procedimento, técnica, operação, implementação, conceito aplicado ou resolução de problema).
+   Se houver apenas um elemento isolado, responda: "invalido".
 
 8. **Lives sem escopo educacional explícito são inválidas.**
-   Se o vídeo for uma live de desenvolvimento, mas o título e a descrição NÃO informarem claramente qual ferramenta, técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
+   Lives só serão consideradas válidas quando o título e a descrição apresentarem evidência suficiente para identificar a ferramenta principal sendo ensinado.
+   Essa evidência só existe quando a ferramenta aparece combinada com pelo menos um segundo elemento técnico
+   (procedimento, técnica, operação, implementação, conceito aplicado ou resolução de problema).
+   Se isso não estiver claramente indicado, responda obrigatoriamente: "invalido".
 
 9. **Cursos sem escopo educacional explícito são inválidos.**
-    Se o vídeo for um curso, mas o título e a descrição NÃO informarem claramente qual ferramenta, técnica, processo, operação, resolução, implementação ou conceito está sendo ENSINADO, responda obrigatoriamente: **"invalido"**.
+   Um curso só será considerado válido quando o título e a descrição apresentarem evidência suficiente para identificar a ferramenta principal sendo ensinado.
+   Essa evidência só existe quando a ferramenta aparece combinada com pelo menos um segundo elemento técnico
+   (procedimento, técnica, operação, implementação, conceito aplicado ou resolução de problema).
+   Se isso não estiver claramente indicado, responda obrigatoriamente: "invalido".
 
 10. **Se o título e a descrição NÃO indicarem claramente qual conteúdo técnico
     será abordado no vídeo**, sendo compostos apenas por linguagem promocional,
@@ -634,6 +635,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
