@@ -165,13 +165,13 @@ REGRAS ABSOLUTAS
    Se houver apenas um elemento isolado, responda: "invalido".
 
 8. **Lives sem escopo educacional explícito são inválidas.**
-   Lives só serão consideradas válidas quando o título e a descrição apresentarem evidência suficiente para identificar a ferramenta principal sendo ensinado.
+   Lives só serão consideradas válidas quando o título e a descrição apresentarem evidência suficiente para identificar a ferramenta principal sendo ensinada.
    Essa evidência só existe quando a ferramenta aparece combinada com pelo menos um segundo elemento técnico
    (procedimento, técnica, operação, implementação, conceito aplicado ou resolução de problema).
    Se isso não estiver claramente indicado, responda obrigatoriamente: "invalido".
 
 9. **Cursos sem escopo educacional explícito são inválidos.**
-   Um curso só será considerado válido quando o título e a descrição apresentarem evidência suficiente para identificar a ferramenta principal sendo ensinado.
+   Um curso só será considerado válido quando o título e a descrição apresentarem evidência suficiente para identificar a ferramenta principal sendo ensinada.
    Essa evidência só existe quando a ferramenta aparece combinada com pelo menos um segundo elemento técnico
    (procedimento, técnica, operação, implementação, conceito aplicado ou resolução de problema).
    Se isso não estiver claramente indicado, responda obrigatoriamente: "invalido".
@@ -635,6 +635,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
