@@ -525,7 +525,7 @@ Sem explicações. Sem JSON.
             topicos_classificados.append("erro")
         
         # Rate limit
-        time.sleep(3)
+        time.sleep(4)
     
     # Adicionar coluna ao DataFrame
     df_para_classificar['topico_trilha'] = topicos_classificados
@@ -668,6 +668,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
