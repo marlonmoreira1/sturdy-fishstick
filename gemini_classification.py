@@ -184,6 +184,26 @@ REGRAS ABSOLUTAS
 11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
     bootcamp, evento ou trilha como complemento técnico do vídeo.
 
+12. LISTA FECHADA DE FERRAMENTAS (OBRIGATÓRIA)
+
+Só gere sinopse se pelo menos uma das ferramentas abaixo aparecer explicitamente citada no título ou na descrição como parte do processo técnico do vídeo:
+
+Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL
+HTML | CSS | React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL
+Flutter | Tailwind CSS | Jetpack Compose | Vite | Pandas | dbt | Spark | TensorFlow | MLflow
+Laravel | Machine Learning | Deep Learning | Model Context Protocol (MCP)
+MongoDB | Linux | Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
+AWS | Azure | GCP | Excel | Power BI | Tableau | Grafana
+RabbitMQ | Kafka | JWT | OAuth2 | Prometheus
+Xcode | SwiftUI | React Native
+Git | REST APIs | Cypress | Postman | Selenium | JUnit | Espresso | JMeter
+
+Se nenhuma ferramenta da lista aparecer explicitamente, responda “invalido”.
+
+NÃO tente mapear termos vagos (“webhook”, “servidor”, “app”, “backend”,
+“URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deploy”, “autenticação”)
+para ferramentas desta lista. Inferência fora da lista é proibida.
+
 ======================================================
 ENTRADAS DO VÍDEO
 ======================================================
@@ -304,6 +324,9 @@ então isso é chute, e você deve NÃO inferir.
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
    ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
    está sendo diretamente ensinada.
+
+A ferramenta principal só pode ser escolhida quando a sinopse indicar que ela é o objeto direto da ação técnica (ensino, configuração, implementação ou operação).
+Tecnologias citadas apenas como parte da aplicação ou do conteúdo sendo processado — e não como foco da atividade técnica — nunca devem ser classificadas como ferramenta principal.
 
 2. Classifique sempre no nível da TECNOLOGIA PRINCIPAL
    (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
@@ -501,7 +524,7 @@ Sem explicações. Sem JSON.
             topicos_classificados.append("erro")
         
         # Rate limit
-        time.sleep(4)
+        time.sleep(3)
     
     # Adicionar coluna ao DataFrame
     df_para_classificar['topico_trilha'] = topicos_classificados
@@ -644,6 +667,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
