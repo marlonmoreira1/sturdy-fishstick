@@ -219,7 +219,8 @@ Produza **apenas um parágrafo de sinopse técnica**,
 contendo exclusivamente informações que sejam **explicitamente sustentadas
 pelo título ou pela descrição**, incluindo:
 
-- a ferramenta principal citada
+- a ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
+É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.)
 - conceitos técnicos centrais que o vídeo explica
 - a operação prática demonstrada
 - o tipo de atividade técnica realizada
@@ -325,8 +326,8 @@ então isso é chute, e você deve NÃO inferir.
    ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
    está sendo diretamente ensinada.
 
-A ferramenta principal só pode ser escolhida quando a sinopse indicar que ela é o objeto direto da ação técnica (ensino, configuração, implementação ou operação).
-Tecnologias citadas apenas como parte da aplicação ou do conteúdo sendo processado — e não como foco da atividade técnica — nunca devem ser classificadas como ferramenta principal.
+A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
+É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
 
 2. Classifique sempre no nível da TECNOLOGIA PRINCIPAL
    (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
@@ -667,6 +668,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
