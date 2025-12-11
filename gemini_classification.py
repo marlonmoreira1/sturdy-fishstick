@@ -197,7 +197,7 @@ RabbitMQ | Kafka
 Prometheus
 Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 
-Se nenhuma ferramenta da lista aparecer explicitamente, responda “invalido”.
+Se nenhuma ferramenta da lista aparecer explicitamente no título ou descrição, responda “invalido”.
 
 NÃO tente mapear termos vagos (“webhook”, “servidor”, “app”, “backend”,
 “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deploy”, “autenticação”)
@@ -665,6 +665,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
