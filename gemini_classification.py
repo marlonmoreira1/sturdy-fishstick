@@ -195,7 +195,7 @@ REGRAS ABSOLUTAS
     - Reacts (reagindo a conteúdo de terceiros)
     - Análises de mercado ou tendências tecnológicas
     - Dicas de carreira, sucesso profissional ou trajetória
-    - Anúncios, promoções, cursos ou eventos
+    - Anúncios de cursos, eventos ou promoções
     - Discussões, opiniões ou debates sobre ferramentas
     
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
@@ -367,12 +367,13 @@ Nesses casos classifique como "invalido".
    a suas tecnologias base quando isso for inevitável.
 
 6. Se a sinopse descrever qualquer um destes conteúdos, classifique IMEDIATAMENTE como "invalido":
-   - Notícias (banimentos, lançamentos, regulações, atualizações)
-   - Reviews ou comparativos (debates sobre qual ferramenta é melhor)
-   - Reacts (análise de conteúdo de terceiros)
-   - Análises de mercado, tendências ou impacto econômico
-   - Discussões sobre carreira ou opinião profissional
+   - Notícias (lançamentos, atualizações, banimentos, regulações)
+   - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
+   - Reacts (reagindo a conteúdo de terceiros)
+   - Análises de mercado ou tendências tecnológicas
+   - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
+   - Discussões, opiniões ou debates sobre ferramentas
    
    Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
    Se a sinopse for ambígua ou não indicar ensino → "invalido".
@@ -706,6 +707,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
