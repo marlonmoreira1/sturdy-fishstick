@@ -156,7 +156,7 @@ REGRAS ABSOLUTAS
 5. **Palavras soltas não caracterizam ensino técnico.**
    Exemplos como “API”, “JavaScript”, “Java”, “Excel”, “docker”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
    NÃO tente mapear termos vagos (“webhook”, “servidor”, “app”, “backend”,
-   “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deploy”, “autenticação”)
+   “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deepseek”, “chatgpt”, “deploy”, “autenticação”)
    para alguma ferramenta. Essa inferência é proibida.
    Nesses casos, responda apenas: “invalido”.
 
@@ -268,8 +268,8 @@ seguindo exclusivamente a lista de ferramentas aceitas do sistema.
 
 **LISTA FERRAMENTAS ACEITAS (use EXATAMENTE estes nomes):**
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
-React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
-Machine Learning | Deep Learning | Model Context Protocol (MCP)
+React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel
+PyTorch | TensorFlow | scikit-learn | Model Context Protocol (MCP)
 MongoDB
 Linux
 Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
@@ -650,6 +650,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
