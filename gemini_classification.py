@@ -298,7 +298,7 @@ Exemplos válidos:
 - Express → framework Node.js → tecnologia_base: Node.js
 - VBA → roda em excel → tecnologia_base: Excel
 
-Além disso, a sinopse deve citar pelo menos um elemento técnico que só exista, ou seja claramente associado, a UMA ferramenta da trilha, por exemplo:
+Além disso, a sinopse deve citar pelo menos um elemento técnico que só exista, ou seja claramente associado, a UMA ferramenta da lista, por exemplo:
 
 ✔ Nome da ferramenta (ex.: React, Terraform, Power BI)
 ✔ Um conceito ou operação exclusivo da ferramenta
@@ -680,6 +680,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
