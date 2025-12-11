@@ -188,6 +188,19 @@ REGRAS ABSOLUTAS
 11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
     bootcamp, evento ou trilha como complemento técnico do vídeo.
 
+12. **Vídeos que não sejam de ensino técnico são automaticamente inválidos.**
+    Se o vídeo for sobre qualquer um destes tópicos, responda IMEDIATAMENTE: **"invalido"**:
+    - Notícias (lançamentos, atualizações, banimentos, regulações)
+    - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
+    - Reacts (reagindo a conteúdo de terceiros)
+    - Análises de mercado ou tendências tecnológicas
+    - Dicas de carreira, sucesso profissional ou trajetória
+    - Anúncios, promoções, cursos ou eventos
+    - Discussões, opiniões ou debates sobre ferramentas
+    
+    Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
+    Se houver dúvida sobre ser ensino → **"invalido"**.
+
 ======================================================
 ENTRADAS DO VÍDEO
 ======================================================
@@ -323,7 +336,7 @@ Além disso, a sinopse deve citar pelo menos um elemento técnico que só exista
 
 - Clusters no Kubernetes
 
-Se NÃO existir esse tipo de evidência → não é permitido classificar e responda apenas: "invalido".
+Se NÃO existir esse tipo de evidência → não é permitido classificar, classifique como "invalido".
 
 ❌ Inferência não permitida:
 Supor qualquer coisa que não esteja presente na sinopse
@@ -331,15 +344,15 @@ Se a relação não for explícita na sinopse OU não for uma ligação técnica
 então isso é chute, e você deve NÃO inferir.
 Quando a sinopse tiver apenas termos vagos
 ou genéricos, sem nenhuma evidência técnica suficiente, você NÃO DEVE inferir.
-Nesses casos responda apenas: "invalido".
+Nesses casos classifique como "invalido".
 
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
    ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
    está sendo diretamente ensinada.
 
-A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
-É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+   A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
+   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
 
 2. Classifique sempre no nível da TECNOLOGIA PRINCIPAL
    (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
@@ -352,6 +365,17 @@ A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
 
 5. Utilize inferência técnica apenas para relacionar ferramentas
    a suas tecnologias base quando isso for inevitável.
+
+6. Se a sinopse descrever qualquer um destes conteúdos, classifique IMEDIATAMENTE como "invalido":
+   - Notícias (banimentos, lançamentos, regulações, atualizações)
+   - Reviews ou comparativos (debates sobre qual ferramenta é melhor)
+   - Reacts (análise de conteúdo de terceiros)
+   - Análises de mercado, tendências ou impacto econômico
+   - Discussões sobre carreira ou opinião profissional
+   - Anúncios de cursos, eventos ou promoções
+   
+   Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
+   Se a sinopse for ambígua ou não indicar ensino → "invalido".
 
 **RESPONDA APENAS COM JSON (sem markdown, sem explicações):**
 
@@ -680,6 +704,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
