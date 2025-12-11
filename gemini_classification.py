@@ -334,7 +334,7 @@ A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
 
 LEMBRETE FINAL:
 - Você NÃO PODE criar novas ferramentas
-- Se na sinopse não houver nenhuma evidência concreta, explícita ou inequivocamente técnica indicando qual ferramenta está sendo ensinada, classifique como ‘invalido’.
+- Se na sinopse não houver nenhuma evidência concreta, explícita ou inequivocamente técnica indicando qual ferramenta da Lista Ferramentas Aceitas está sendo ensinada, classifique como ‘invalido’.
 - Se a sinopse for genérica demais (ex: motivacional, opinião,
    apresentação, dicas vagas, cursos, lives), classifique como "invalido".
 
@@ -649,6 +649,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
