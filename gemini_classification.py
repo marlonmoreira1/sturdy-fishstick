@@ -158,6 +158,7 @@ REGRAS ABSOLUTAS
    NÃO tente mapear termos vagos (“webhook”, “servidor”, “app”, “backend”,
    “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deploy”, “autenticação”)
    para alguma ferramenta. Essa inferência é proibida.
+   Nesses casos, o vídeo deve ser considerado como “invalido”.
 
 6. **Hashtags NUNCA podem ser usadas como base semântica.**
    Se a ferramenta ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
@@ -649,6 +650,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
