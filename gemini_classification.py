@@ -186,8 +186,6 @@ REGRAS ABSOLUTAS
 
 12. LISTA FECHADA DE FERRAMENTAS (OBRIGATÓRIA)
 
-Só gere sinopse se pelo menos uma das ferramentas abaixo aparecer explicitamente citada no título ou na descrição (desde que não viole as regras 2, 5, 6) como parte do processo técnico do vídeo:
-
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
 React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
 Machine Learning | Deep Learning | Model Context Protocol (MCP)
@@ -668,6 +666,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
