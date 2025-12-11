@@ -354,7 +354,7 @@ LEMBRETE FINAL:
 - Se a sinopse for genérica demais (ex: motivacional, opinião,
    apresentação, dicas vagas, cursos, lives), classifique como "invalido".
 
-Internamente, identifique qual ferramenta realiza a ação técnica central descrita no vídeo.
+Internamente, identifique qual ferramenta é o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
 Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
@@ -665,6 +665,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
