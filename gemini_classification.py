@@ -155,8 +155,8 @@ REGRAS ABSOLUTAS
 
 5. **Palavras soltas não caracterizam ensino técnico.**
    Exemplos como “API”, “JavaScript”, “Java”, “Excel”, “docker”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
-   Termos vagos (“webhook”, “servidor”, “app”, “backend”,
-   “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deepseek”, “chatgpt”, “gemini”, “claude”, “deploy”, “autenticação”, “aplicação”)
+   Exemplos de termos vagos como “webhook”, “servidor”, “app”, “backend”,
+   “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deepseek”, “chatgpt”, “gemini”, “claude”, “deploy”, “autenticação”, “aplicação”
    quando não acompanhados da ferramenta e de operação, conceito, técnica ou processo claramente descrito, NÃO são suficientes para gerar sinopse.
    Nesses casos, responda apenas: “invalido”.
 
@@ -298,10 +298,40 @@ Exemplos válidos:
 - Express → framework Node.js → tecnologia_base: Node.js
 - VBA → roda em excel → tecnologia_base: Excel
 
+Além disso, a sinopse deve citar pelo menos um elemento técnico que só exista, ou seja claramente associado, a UMA ferramenta da trilha, por exemplo:
+
+✔ Nome da ferramenta (ex.: React, Terraform, Power BI)
+✔ Um conceito ou operação exclusivo da ferramenta
+
+- useState, JSX → React
+
+- terraform apply, providers → Terraform
+
+- DataFrame, merge → Pandas
+
+- SELECT, JOIN → SQL
+
+✔ Uma técnica ou processo oficial dessa ferramenta
+
+- Rotas do Next.js
+
+- Hooks do React
+
+- Pipelines do Airflow
+
+- Modelos no TensorFlow
+
+- Clusters no Kubernetes
+
+Se NÃO existir esse tipo de evidência → não é permitido classificar e responda apenas: "invalido".
+
 ❌ Inferência não permitida:
 Supor qualquer coisa que não esteja presente na sinopse
 Se a relação não for explícita na sinopse OU não for uma ligação técnica clara e oficial,
 então isso é chute, e você deve NÃO inferir.
+Quando a sinopse tiver apenas termos vagos
+ou genéricos, sem nenhuma evidência técnica suficiente, você NÃO DEVE inferir.
+Nesses casos responda apenas: "invalido".
 
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
@@ -650,6 +680,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
