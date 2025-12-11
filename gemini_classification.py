@@ -154,7 +154,10 @@ REGRAS ABSOLUTAS
 4. Nunca classifique trilha, não classifique ferramenta final, não gere JSON.
 
 5. **Palavras soltas não caracterizam ensino técnico.**
-   Exemplos como “API”, “JavaScript”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
+   Exemplos como “API”, “JavaScript”, “Java”, “Excel”, “docker”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
+   NÃO tente mapear termos vagos (“webhook”, “servidor”, “app”, “backend”,
+   “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deploy”, “autenticação”)
+   para alguma ferramenta. Essa inferência é proibida.
 
 6. **Hashtags NUNCA podem ser usadas como base semântica.**
    Se a ferramenta ou o conteúdo técnico aparecer **apenas em hashtags**, o vídeo deve ser considerado **"invalido"**.
@@ -183,24 +186,6 @@ REGRAS ABSOLUTAS
 
 11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
     bootcamp, evento ou trilha como complemento técnico do vídeo.
-
-12. LISTA FECHADA DE FERRAMENTAS (OBRIGATÓRIA)
-Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
-React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
-Machine Learning | Deep Learning | Model Context Protocol (MCP)
-MongoDB
-Linux
-Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
-AWS | Azure | GCP
-Excel | Power BI | Tableau | Grafana
-RabbitMQ | Kafka
-Prometheus
-Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
-
-Se nenhuma ferramenta da lista aparecer explicitamente no título ou descrição, responda “invalido”.
-NÃO tente mapear termos vagos (“webhook”, “servidor”, “app”, “backend”,
-“URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deploy”, “autenticação”)
-para ferramentas desta lista. Inferência fora da lista é proibida.
 
 ======================================================
 ENTRADAS DO VÍDEO
@@ -664,6 +649,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
