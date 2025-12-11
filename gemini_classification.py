@@ -185,7 +185,6 @@ REGRAS ABSOLUTAS
     bootcamp, evento ou trilha como complemento técnico do vídeo.
 
 12. LISTA FECHADA DE FERRAMENTAS (OBRIGATÓRIA)
-
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
 React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
 Machine Learning | Deep Learning | Model Context Protocol (MCP)
@@ -666,6 +665,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
