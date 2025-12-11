@@ -186,17 +186,19 @@ REGRAS ABSOLUTAS
 
 12. LISTA FECHADA DE FERRAMENTAS (OBRIGATÓRIA)
 
-Só gere sinopse se pelo menos uma das ferramentas abaixo aparecer explicitamente citada no título ou na descrição como parte do processo técnico do vídeo:
+Só gere sinopse se pelo menos uma das ferramentas abaixo aparecer explicitamente citada no título ou na descrição (desde que não viole as regras 2, 5, 6) como parte do processo técnico do vídeo:
 
-Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL
-HTML | CSS | React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL
-Flutter | Tailwind CSS | Jetpack Compose | Vite | Pandas | dbt | Spark | TensorFlow | MLflow
-Laravel | Machine Learning | Deep Learning | Model Context Protocol (MCP)
-MongoDB | Linux | Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
-AWS | Azure | GCP | Excel | Power BI | Tableau | Grafana
-RabbitMQ | Kafka | JWT | OAuth2 | Prometheus
-Xcode | SwiftUI | React Native
-Git | REST APIs | Cypress | Postman | Selenium | JUnit | Espresso | JMeter
+Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
+React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
+Machine Learning | Deep Learning | Model Context Protocol (MCP)
+MongoDB
+Linux
+Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
+AWS | Azure | GCP
+Excel | Power BI | Tableau | Grafana
+RabbitMQ | Kafka
+Prometheus
+Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 
 Se nenhuma ferramenta da lista aparecer explicitamente, responda “invalido”.
 
@@ -284,7 +286,7 @@ seguindo exclusivamente a lista de ferramentas aceitas do sistema.
 
 **LISTA FERRAMENTAS ACEITAS (use EXATAMENTE estes nomes):**
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
-React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Jetpack Compose | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
+React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | TensorFlow | MLflow | Laravel
 Machine Learning | Deep Learning | Model Context Protocol (MCP)
 MongoDB
 Linux
@@ -292,10 +294,8 @@ Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
 AWS | Azure | GCP
 Excel | Power BI | Tableau | Grafana
 RabbitMQ | Kafka
-JWT | OAuth2
-Prometheus 
-Xcode | SwiftUI | React Native
-Git | REST APIs | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
+Prometheus
+Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 
 ---
 
@@ -668,6 +668,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
