@@ -244,7 +244,7 @@ O texto deve parecer uma descrição de conteúdo feita por um analista técnico
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(7.5)
+        time.sleep(8)
     
     df_para_classificar['contexto'] = classificacoes
     return df_para_classificar
@@ -411,7 +411,7 @@ Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(4.5)
+        time.sleep(5)
     
     df_para_classificar['classificacao_gemini'] = classificacoes
     return df_para_classificar
@@ -662,6 +662,8 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
 
     df_classificado_trilha = classificar_trilhas_groq(df_classificado,gemini_api_key)
 
+    df_classificado_trilha['topico_trilha'] = df_classificado_trilha['topico_trilha'].astype(str).str.strip().str.lower()
+
     df_classificado_trilha = df_classificado_trilha[~df_classificado_trilha['topico_trilha'].isin(['invalido','sem_trilha'])]
     
     # 7. Salvar resultado final
@@ -704,6 +706,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
