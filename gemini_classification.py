@@ -203,7 +203,7 @@ contendo exclusivamente informações que sejam **explicitamente sustentadas
 pelo título ou pela descrição**, incluindo:
 
 - a ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
-É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.)
+  É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.)
 - conceitos técnicos centrais que o vídeo explica
 - a operação prática demonstrada
 - o tipo de atividade técnica realizada
@@ -649,6 +649,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
