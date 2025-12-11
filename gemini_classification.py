@@ -156,7 +156,7 @@ REGRAS ABSOLUTAS
 5. **Palavras soltas não caracterizam ensino técnico.**
    Exemplos como “API”, “JavaScript”, “Java”, “Excel”, “docker”, “código”, “backend”, “programação”, quando não acompanhados de operação, conceito, técnica ou processo claramente descrito, **NÃO são suficientes** para gerar sinopse.
    NÃO tente mapear termos vagos (“webhook”, “servidor”, “app”, “backend”,
-   “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deepseek”, “chatgpt”, “deploy”, “autenticação”)
+   “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deepseek”, “chatgpt”, “gemini”, “claude”, “deploy”, “autenticação”)
    para alguma ferramenta. Essa inferência é proibida.
    Nesses casos, responda apenas: “invalido”.
 
@@ -650,6 +650,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
