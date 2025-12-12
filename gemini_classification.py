@@ -338,8 +338,8 @@ Exemplos válidos:
 
 - Clusters no Kubernetes
 
-Se NÃO existir esse tipo de evidência → não é permitido classificar, classifique como "invalido".
-Não infira ferramentas por contexto, tipo de projeto ou domínio.
+Se NÃO existir esse tipo de evidência → classifique como "invalido".
+Não infira ferramentas por contexto, tipo de projeto ou domínio → Classifique como "invalido".
 Se QUALQUER uma das 3 condições falhar → classifique como "invalido" IMEDIATAMENTE.
 
 
@@ -705,6 +705,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
