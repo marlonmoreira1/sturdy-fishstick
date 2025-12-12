@@ -281,7 +281,6 @@ seguindo exclusivamente a lista de ferramentas aceitas do sistema.
 2. NÃO invente ferramentas.
 3. NUNCA invente ou presuma ferramentas não mencionadas
 
-
 **LISTA FERRAMENTAS ACEITAS (use EXATAMENTE estes nomes):**
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
 React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel
@@ -301,8 +300,37 @@ Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 Sinopse Técnica: {row['contexto']}
 
 ---
+🎯 REGRAS:
+1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
+   ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
+   está sendo diretamente ensinada.
 
-🧠 INFERÊNCIA PERMITIDA:
+   A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
+   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+
+2. Classifique sempre no nível da FERRAMENTA PRINCIPAL
+   (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
+
+3. Se o vídeo ensinar uma funcionalidade de uma ferramenta,
+   classifique pela ferramenta responsável diretamente por essa funcionalidade.
+
+4. Evite classificar conceitos abstratos
+   (loops, algoritmos, ponteiros, estruturas conceituais).
+
+5. Se a sinopse descrever qualquer um destes conteúdos, classifique IMEDIATAMENTE como "invalido":
+   - Notícias (lançamentos, atualizações, banimentos, regulações)
+   - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
+   - Reacts (reagindo a conteúdo de terceiros)
+   - Análises de mercado ou tendências tecnológicas
+   - Dicas de carreira, sucesso profissional ou trajetória
+   - Anúncios de cursos, eventos ou promoções
+   - Discussões, opiniões ou debates sobre ferramentas
+   - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
+   
+   Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
+   Se a sinopse for ambígua ou não indicar ensino → "invalido".
+
+6. 🧠 INFERÊNCIA PERMITIDA:
 Inferência só é permitida se TODAS as 3 condições abaixo forem verdadeiras:
 1. A ferramenta DEVE estar explicitamente mencionada na sinopse
 2. A ferramenta DEVE estar na Lista de Ferramentas Aceitas
@@ -344,39 +372,6 @@ Exemplos válidos:
 - Components, Props do Vue
 
 Não infira ferramentas por contexto, tipo de projeto ou domínio → Classifique como "invalido".
-
-🎯 REGRAS:
-1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
-   ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
-   está sendo diretamente ensinada.
-
-   A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
-   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
-
-2. Classifique sempre no nível da TECNOLOGIA PRINCIPAL
-   (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
-
-3. Se o vídeo ensinar uma funcionalidade de uma tecnologia,
-   classifique pela tecnologia responsável diretamente por essa funcionalidade.
-
-4. Evite classificar conceitos abstratos
-   (loops, algoritmos, ponteiros, estruturas conceituais).
-
-5. Utilize inferência técnica apenas para relacionar ferramentas
-   a suas tecnologias base quando isso for inevitável.
-
-6. Se a sinopse descrever qualquer um destes conteúdos, classifique IMEDIATAMENTE como "invalido":
-   - Notícias (lançamentos, atualizações, banimentos, regulações)
-   - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
-   - Reacts (reagindo a conteúdo de terceiros)
-   - Análises de mercado ou tendências tecnológicas
-   - Dicas de carreira, sucesso profissional ou trajetória
-   - Anúncios de cursos, eventos ou promoções
-   - Discussões, opiniões ou debates sobre ferramentas
-   - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
-   
-   Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
-   Se a sinopse for ambígua ou não indicar ensino → "invalido".
 
 **RESPONDA APENAS COM JSON (sem markdown, sem explicações):**
 
@@ -707,6 +702,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
