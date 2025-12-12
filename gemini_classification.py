@@ -301,9 +301,10 @@ Sinopse Técnica: {row['contexto']}
 ---
 
 🧠 INFERÊNCIA PERMITIDA:
-Inferência só é permitida para ligar uma ferramenta explicitamente citada na sinopse
-a sua tecnologia base quando essa relação é direta, oficial e inevitável
-E quando essa tecnologia aparece na lista de ferramentas aceitas.
+Inferência só é permitida nas seguintes condições:
+1. A ferramenta DEVE estar explicitamente mencionada na sinopse
+2. A ferramenta DEVE estar na Lista de Ferramentas Aceitas
+3. DEVE haver pelo menos um elemento técnico específico dessa ferramenta na sinopse
 Exemplos válidos:
 - BullMQ → roda em Node.js → tecnologia_base: Node.js
 - Pandas → biblioteca Python → tecnologia_base: Python
@@ -312,12 +313,10 @@ Exemplos válidos:
 - Express → framework Node.js → tecnologia_base: Node.js
 - VBA → roda em excel → tecnologia_base: Excel
 
-Além disso, a sinopse deve citar explicitamente uma ferramenta da lista e também citar um elemento técnico relacionado diretamente à ferramenta citada, por exemplo:
-
 ✔ Nome da ferramenta (ex.: React, Terraform, Power BI)
 ✔ Um conceito, operação ou recurso oficial e documentado da ferramenta
 
-- useState, JSX → React
+- useState, JSX → React 
 
 - terraform apply, providers → Terraform
 
@@ -338,6 +337,8 @@ Além disso, a sinopse deve citar explicitamente uma ferramenta da lista e tamb�
 - Clusters no Kubernetes
 
 Se NÃO existir esse tipo de evidência → não é permitido classificar, classifique como "invalido".
+Não infira ferramentas por contexto, tipo de projeto ou domínio.
+Se QUALQUER uma das 3 condições falhar → classifique como "invalido" IMEDIATAMENTE.
 
 
 🎯 REGRAS:
@@ -702,6 +703,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
