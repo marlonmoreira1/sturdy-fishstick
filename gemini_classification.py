@@ -304,7 +304,7 @@ Sinopse Técnica: {row['contexto']}
 Inferência só é permitida nas seguintes condições:
 1. A ferramenta DEVE estar explicitamente mencionada na sinopse
 2. A ferramenta DEVE estar na Lista de Ferramentas Aceitas
-3. DEVE haver pelo menos um elemento técnico específico dessa ferramenta na sinopse
+3. DEVE haver pelo menos um elemento técnico oficial, documentado e característico da ferramenta na sinopse
 Exemplos válidos:
 - BullMQ → roda em Node.js → tecnologia_base: Node.js
 - Pandas → biblioteca Python → tecnologia_base: Python
@@ -703,6 +703,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
