@@ -287,7 +287,7 @@ Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | S
 React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel
 PyTorch | TensorFlow | scikit-learn | Model Context Protocol (MCP)
 MongoDB
-Linux
+Linux | IDE
 Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
 AWS | Azure | GCP
 Excel | Power BI | Tableau | Grafana
@@ -303,10 +303,13 @@ Sinopse Técnica: {row['contexto']}
 ---
 
 🧠 INFERÊNCIA PERMITIDA:
-Inferência só é permitida nas seguintes condições:
+Inferência só é permitida se TODAS as 3 condições abaixo forem verdadeiras:
 1. A ferramenta DEVE estar explicitamente mencionada na sinopse
 2. A ferramenta DEVE estar na Lista de Ferramentas Aceitas
 3. DEVE haver pelo menos um elemento técnico oficial, documentado e característico da ferramenta na sinopse
+
+Se QUALQUER uma das 3 condições falhar → classifique como "invalido" IMEDIATAMENTE.
+
 Exemplos válidos:
 - BullMQ → roda em Node.js → tecnologia_base: Node.js
 - Pandas → biblioteca Python → tecnologia_base: Python
@@ -328,20 +331,19 @@ Exemplos válidos:
 
 ✔ Uma técnica ou processo oficial dessa ferramenta
 
-- Rotas do Next.js
+- App Router do Next.js
 
 - Hooks do React
 
-- Pipelines do Airflow
+- DAGs do Airflow
 
-- Modelos no TensorFlow
+- \keras Models do TensorFlow
 
 - Clusters no Kubernetes
 
-Se NÃO existir esse tipo de evidência → classifique como "invalido".
-Não infira ferramentas por contexto, tipo de projeto ou domínio → Classifique como "invalido".
-Se QUALQUER uma das 3 condições falhar → classifique como "invalido" IMEDIATAMENTE.
+- Components, Props do Vue
 
+Não infira ferramentas por contexto, tipo de projeto ou domínio → Classifique como "invalido".
 
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
@@ -705,6 +707,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
