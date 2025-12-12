@@ -126,7 +126,8 @@ Gerar um resumo técnico confiável, eliminando completamente ruídos promociona
 ======================================================
 REGRAS ABSOLUTAS
 ======================================================
-1. **Não invente ferramentas.**     
+1. **Não invente ferramentas. Além disso, nunca expanda siglas, termos ou nomes técnicos que você não reconhece/sabe com 100% de certeza o que é**
+   MCP significa exclusivamente "Model Context Protocol". 
 
 2. **IGNORE COMPLETAMENTE** qualquer trecho que não seja técnico:  
     - links  
@@ -703,6 +704,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
