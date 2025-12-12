@@ -193,7 +193,7 @@ REGRAS ABSOLUTAS
     - Notícias (lançamentos, atualizações, banimentos, regulações)
     - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
     - Reacts (reagindo a conteúdo de terceiros)
-    - Análises de mercado ou tendências tecnológicas
+    - Análises de ferramenta, mercado ou tendências tecnológicas
     - Dicas de carreira, sucesso profissional ou trajetória
     - Anúncios de cursos, eventos ou promoções
     - Discussões, opiniões ou debates sobre ferramentas
@@ -311,10 +311,10 @@ Exemplos válidos:
 - Express → framework Node.js → tecnologia_base: Node.js
 - VBA → roda em excel → tecnologia_base: Excel
 
-Além disso, a sinopse deve citar pelo menos um elemento técnico que só exista, ou seja claramente associado, a UMA ferramenta da lista, por exemplo:
+Além disso, a sinopse deve citar explicitamente uma ferramenta da lista e também citar um elemento técnico relacionado diretamente à ferramenta citada, por exemplo:
 
 ✔ Nome da ferramenta (ex.: React, Terraform, Power BI)
-✔ Um conceito ou operação exclusivo da ferramenta
+✔ Um conceito, operação ou recurso oficial e documentado da ferramenta
 
 - useState, JSX → React
 
@@ -707,6 +707,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
