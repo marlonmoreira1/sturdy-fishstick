@@ -197,6 +197,7 @@ REGRAS ABSOLUTAS
     - Dicas de carreira, sucesso profissional ou trajetória
     - Anúncios de cursos, eventos ou promoções
     - Discussões, opiniões ou debates sobre ferramentas
+    - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
     
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
     Se houver dúvida sobre ser ensino → **"invalido"**.
@@ -338,13 +339,6 @@ Além disso, a sinopse deve citar explicitamente uma ferramenta da lista e tamb�
 
 Se NÃO existir esse tipo de evidência → não é permitido classificar, classifique como "invalido".
 
-❌ Inferência não permitida:
-Supor qualquer coisa que não esteja presente na sinopse
-Se a relação não for explícita na sinopse OU não for uma ligação técnica clara e oficial,
-então isso é chute, e você deve NÃO inferir.
-Quando a sinopse tiver apenas termos vagos
-ou genéricos, sem nenhuma evidência técnica suficiente, você NÃO DEVE inferir.
-Nesses casos classifique como "invalido".
 
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
@@ -374,6 +368,7 @@ Nesses casos classifique como "invalido".
    - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
    - Discussões, opiniões ou debates sobre ferramentas
+   - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
    
    Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
    Se a sinopse for ambígua ou não indicar ensino → "invalido".
@@ -707,6 +702,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
