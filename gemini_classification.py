@@ -225,9 +225,8 @@ Produza **apenas um parágrafo de sinopse técnica**,
 contendo exclusivamente informações que sejam **explicitamente sustentadas
 pelo título ou pela descrição**, incluindo:
 
-- a ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
-  É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.)
-- conceitos técnicos centrais que o vídeo explica
+- A ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente. É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.)
+- O conceito técnico central que o vídeo explica
 
 Se qualquer um desses itens **não estiver claramente indicado no título ou na descrição**,
 ele **não deve ser inferido, deduzido ou estimado**.
@@ -304,12 +303,8 @@ Sinopse Técnica: {row['contexto']}
 ---
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
-   ser aquela sobre a qual a técnica, implementação, configuração, construção, ou operação
-   está sendo diretamente ensinada.
-
-   A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
-   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
-
+   ser sempre aquela que o vídeo ENSINA diretamente. É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+   
 2. Classifique sempre no nível da FERRAMENTA PRINCIPAL
    (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
 
@@ -704,6 +699,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
