@@ -223,8 +223,6 @@ pelo título ou pela descrição**, incluindo:
 - a ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.)
 - conceitos técnicos centrais que o vídeo explica
-- a operação prática demonstrada
-- o tipo de atividade técnica realizada
 - considere somente o que for estritamente técnico dentro do título ou da descrição
 
 Se qualquer um desses itens **não estiver claramente indicado no título ou na descrição**,
@@ -702,6 +700,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
