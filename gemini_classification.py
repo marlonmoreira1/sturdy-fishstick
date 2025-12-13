@@ -210,6 +210,11 @@ REGRAS ABSOLUTAS
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
     Se houver dúvida sobre ser ensino → **"invalido"**.
 
+13. Quando mais de uma ferramenta for explicitamente citada,
+    a sinopse DEVE mencionar APENAS aquela que o vídeo ensina diretamente,
+    sendo esta a ferramenta foco do vídeo, sobre a qual são dadas instruções práticas
+    e explicado o conceito técnico central do vídeo.
+
 
 ======================================================
 ENTRADAS DO VÍDEO
@@ -304,7 +309,7 @@ Sinopse Técnica: {row['contexto']}
 ---
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE ser sempre aquela que o vídeo ENSINA diretamente.
-   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas e explicando o conceito técnico central do vídeo.
    
 2. Classifique sempre no nível da FERRAMENTA PRINCIPAL
    (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
@@ -390,8 +395,8 @@ Exemplos válidos:
     "tipo_video": "projeto | aula | curso | invalido"
 }}
 
-Internamente, identifique qual é a ferramenta principal que o vídeo ensina diretamente. 
-É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+Internamente, identifique qual é a ferramenta principal que o vídeo ensina diretamente, 
+sendo esta a ferramenta foco do vídeo, sobre a qual são dadas instruções práticas e explicado o conceito técnico central do vídeo.
 Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
@@ -704,6 +709,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
