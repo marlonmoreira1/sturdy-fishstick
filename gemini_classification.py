@@ -188,7 +188,7 @@ REGRAS ABSOLUTAS
     aspiracional, anúncios de curso, bootcamp, evento ou venda,
     responda obrigatoriamente: **"invalido"**.
 
-11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal,
+11. É PROIBIDO utilizar informações genéricas e nome de curso, playlist, canal,
     formação, bootcamp, evento ou trilha COMO EVIDÊNCIA TÉCNICA do vídeo.
     
     O fato de um vídeo fazer parte de um curso NÃO invalida o conteúdo.
@@ -377,7 +377,7 @@ Não infira ferramentas quando a sinopse mencionar APENAS:
  - Se a sinopse descrever apenas conceitos (ex: webhooks, DTOs, APIs, microsserviços, padrões de design, arquitetura, etc.)  
  - Ferramentas não listadas sem ferramenta da lista (ex: Supabase, Firebase, Vercel, Netlify, n8n, Zapier, Webflow, vs code)
  - Se a sinopse for genérica demais (ex: motivacional, opinião, apresentação, dicas vagas, cursos, lives)
- Nesses casos, se NÃO houver ferramenta da lista explicitamente mencionada, classifique como "invalido".
+ Nesses casos, se NÃO houver ferramenta da LISTA DE FERRAMENTAS ACEITAS explicitamente mencionada, classifique como "invalido".
 
 **RESPONDA APENAS COM JSON (sem markdown, sem explicações):**
 
@@ -699,6 +699,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
