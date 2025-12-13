@@ -302,8 +302,8 @@ Sinopse Técnica: {row['contexto']}
 
 ---
 🎯 REGRAS:
-1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
-   ser sempre aquela que o vídeo ENSINA diretamente. É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE ser sempre aquela que o vídeo ENSINA diretamente.
+   É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
    
 2. Classifique sempre no nível da FERRAMENTA PRINCIPAL
    (nunca comandos internos, bibliotecas de baixo nível ou conceitos).
@@ -386,7 +386,7 @@ LEMBRETE FINAL:
 - Se a sinopse for genérica demais (ex: motivacional, opinião,
    apresentação, dicas vagas, cursos, lives), classifique como "invalido".
 
-Internamente, identifique qual ferramenta é o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+Internamente, identifique qual é a ferramenta principal que o vídeo ensina diretamente. É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
 Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
@@ -699,6 +699,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
