@@ -187,8 +187,9 @@ REGRAS ABSOLUTAS
     aspiracional, anúncios de curso, bootcamp, evento ou venda,
     responda obrigatoriamente: **"invalido"**.
 
-11. É PROIBIDO utilizar informações genéricas de curso, playlist, canal, formação,
-    bootcamp, evento ou trilha como complemento técnico do vídeo.
+11. É PROIBIDO utilizar QUALQUER informação de curso, playlist, canal,
+    formação, bootcamp, evento ou trilha para gerar ou complementar
+    a sinopse técnica do vídeo.
 
 12. **Vídeos que não sejam de ensino técnico são automaticamente inválidos.**
     Se o vídeo for sobre qualquer um destes tópicos, responda IMEDIATAMENTE: **"invalido"**:
@@ -702,6 +703,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
