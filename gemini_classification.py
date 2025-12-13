@@ -188,12 +188,12 @@ REGRAS ABSOLUTAS
     aspiracional, anúncios de curso, bootcamp, evento ou venda,
     responda obrigatoriamente: **"invalido"**.
 
-11. É PROIBIDO utilizar informações genéricas e nome de curso, playlist, canal,
+11. É PROIBIDO utilizar informações de curso, playlist, canal,
     formação, bootcamp, evento ou trilha COMO EVIDÊNCIA TÉCNICA do vídeo.
     
     O fato de um vídeo fazer parte de um curso NÃO invalida o conteúdo.
-    A sinopse técnica deve ser baseada EXCLUSIVAMENTE no conteúdo técnico
-    explicitamente descrito no título ou na descrição, e NUNCA no nome do curso, playlist, canal,
+    A sinopse técnica deve ser baseada EXCLUSIVAMENTE no conteúdo
+    explicitamente descrito no título ou na descrição desse vídeo específico, e NUNCA no curso, playlist, canal,
     formação, bootcamp, evento ou trilha.
 
 12. **Vídeos que não sejam de ensino técnico são automaticamente inválidos.**
@@ -209,6 +209,20 @@ REGRAS ABSOLUTAS
     
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
     Se houver dúvida sobre ser ensino → **"invalido"**.
+
+13. Se nenhuma das ferramentas abaixo estiver explicitamente citada no título ou descrição de forma válida segundo TODAS as regras acima, responda imediatamente: "invalido".
+    **LISTA FERRAMENTAS ACEITAS (EXATAMENTE estes nomes):**
+    Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
+    React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel
+    PyTorch | TensorFlow | scikit-learn | Model Context Protocol (MCP)
+    MongoDB
+    Linux | IDE
+    Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
+    AWS | Azure | GCP
+    Excel | Power BI | Tableau | Grafana
+    RabbitMQ | Kafka
+    Prometheus
+    Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 
 ======================================================
 ENTRADAS DO VÍDEO
@@ -388,6 +402,10 @@ Não infira ferramentas quando a sinopse mencionar APENAS:
     "cargo": "front-end | back-end | fullstack | devops | qa | analista de dados | engenheiro de dados | cientista de dados | analista de bi | android | ios | invalido",
     "tipo_video": "projeto | aula | curso | invalido"
 }}
+
+Internamente, identifique qual é a ferramenta principal que o vídeo ensina diretamente. 
+É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
+Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
         try:
@@ -699,6 +717,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
