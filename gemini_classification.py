@@ -342,6 +342,9 @@ Exemplos válidos:
 - nftables → comando do Linux → tecnologia_base: Linux
 - Express → framework Node.js → tecnologia_base: Node.js
 - VBA → roda em excel → tecnologia_base: Excel
+- Lodash → biblioteca JavaScript → tecnologia_base: JavaScript
+- CloudWatch → serviço de monitoramento AWS → tecnologia_base: AWS
+- docker run → comando Docker → tecnologia_base: Docker
 
 ✔ Nome da ferramenta (ex.: React, Terraform, Power BI)
 ✔ Um conceito, operação ou recurso oficial e documentado da ferramenta
@@ -368,30 +371,23 @@ Exemplos válidos:
 
 - Components, Props do Vue
 
-Não infira ferramentas por contexto, tipo de projeto ou domínio → Classifique como "invalido".
+Não infira ferramentas quando a sinopse mencionar APENAS:
+ - Contexto geral sem ferramenta específica (ex: "backend", "aplicação", "front-end", "API", "servidor")
+ - Tipo de projeto sem ferramenta específica (ex: "chat", "dashboard", "IA", "e-commerce", "blog")
+ - Se a sinopse descrever apenas conceitos (ex: webhooks, DTOs, APIs, microsserviços, padrões de design, arquitetura, etc.)  
+ - Ferramentas não listadas sem ferramenta da lista (ex: Supabase, Firebase, Vercel, Netlify, n8n, Zapier, Webflow, vs code)
+ - Se a sinopse for genérica demais (ex: motivacional, opinião, apresentação, dicas vagas, cursos, lives)
+ Nesses casos, se NÃO houver ferramenta da lista explicitamente mencionada, classifique como "invalido".
 
 **RESPONDA APENAS COM JSON (sem markdown, sem explicações):**
 
 {{
     "ferramenta_principal": "nome_exato_da_lista_ou_invalido",
-    "tecnologia_base": "tecnologia_mais_ampla_ou_ecossistema_da_lista",
+    "tecnologia_base": "tecnologia_base_ou_invalido",
     "confianca": "alta/media/baixa",
     "cargo": "front-end | back-end | fullstack | devops | qa | analista de dados | engenheiro de dados | cientista de dados | analista de bi | android | ios | invalido",
     "tipo_video": "projeto | aula | curso | invalido"
 }}
-
-LEMBRETE FINAL:
-- Você NÃO PODE criar novas ferramentas
-- Se na sinopse a ferramenta não estiver explicitamente mencionada, não estiver 
-  na lista de ferramentas aceitas, e não tiver um elemento técnico oficial, 
-  documentado e característico da ferramenta, classifique como "invalido".
-- Se a sinopse descrever apenas conceitos (ex: webhooks, DTOs, APIs, microsserviços, padrões de design, arquitetura, etc.)
-  sem mencionar ferramenta da lista de ferramentas aceitas, classifique como "invalido".
-- Se a sinopse for genérica demais (ex: motivacional, opinião,
-   apresentação, dicas vagas, cursos, lives), classifique como "invalido".
-
-Internamente, identifique qual é a ferramenta principal que o vídeo ensina diretamente. É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas.
-Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
         try:
@@ -703,6 +699,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
