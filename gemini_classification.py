@@ -136,7 +136,8 @@ REGRAS ABSOLUTAS
     - cursos
     - eventos
     - promoções
-    - reviews     
+    - reviews 
+    - nomes de cursos, eventos, lives, bootcamps, imersões, desafios, semanas, maratonas
     - emojis  
     - hashtags 
     - agradecimentos     
@@ -704,6 +705,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
