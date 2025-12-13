@@ -193,7 +193,7 @@ REGRAS ABSOLUTAS
     
     O fato de um vídeo fazer parte de um curso NÃO invalida o conteúdo.
     A sinopse técnica deve ser baseada EXCLUSIVAMENTE no conteúdo
-    explicitamente descrito no título ou na descrição desse vídeo específico, e NUNCA no curso, playlist, canal,
+    explicitamente descrito no título ou na descrição desse vídeo específico, e NUNCA no nome do curso, playlist, canal,
     formação, bootcamp, evento ou trilha.
 
 12. **Vídeos que não sejam de ensino técnico são automaticamente inválidos.**
@@ -210,19 +210,6 @@ REGRAS ABSOLUTAS
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
     Se houver dúvida sobre ser ensino → **"invalido"**.
 
-13. Se nenhuma das ferramentas abaixo estiver explicitamente citada no título ou descrição de forma válida segundo TODAS as regras acima, responda imediatamente: "invalido".
-    **LISTA FERRAMENTAS ACEITAS (EXATAMENTE estes nomes):**
-    Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
-    React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel
-    PyTorch | TensorFlow | scikit-learn | Model Context Protocol (MCP)
-    MongoDB
-    Linux | IDE
-    Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform
-    AWS | Azure | GCP
-    Excel | Power BI | Tableau | Grafana
-    RabbitMQ | Kafka
-    Prometheus
-    Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 
 ======================================================
 ENTRADAS DO VÍDEO
@@ -717,6 +704,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
