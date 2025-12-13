@@ -161,15 +161,15 @@ REGRAS ABSOLUTAS
    Exemplos de termos vagos como “webhook”, “servidor”, “app”, “backend”,
    “URL”, “Stripe”, “pagamento”, “chat”, “nuvem”, “deepseek”, “chatgpt”, “gemini”, “claude”, “deploy”, “autenticação”, “aplicação”
    quando não acompanhados da ferramenta e de operação, conceito, técnica ou processo claramente descrito, NÃO são suficientes para gerar sinopse.
-   Nesses casos, responda apenas: “invalido”.
+   Nesses casos, responda obrigatoriamente: “invalido”.
 
 6. **Hashtags NUNCA podem ser usadas como base semântica.**
-   Se a ferramenta ou o conteúdo técnico aparecer **apenas em hashtags**, responda apenas: **"invalido"**.
+   Se a ferramenta ou o conteúdo técnico aparecer **apenas em hashtags**, responda obrigatoriamente: **"invalido"**.
 
 7. Para que um vídeo seja válido, o título e a descrição devem apresentar evidência suficiente para identificar a FERRAMENTA PRINCIPAL.
    Essa evidência só existe quando a ferramenta aparece combinada com pelo menos um segundo elemento técnico
    (procedimento, técnica, operação, implementação, conceito aplicado ou resolução de problema).
-   Se houver apenas um elemento isolado, responda apenas: "invalido".
+   Se houver apenas um elemento isolado, responda obrigatoriamente: "invalido".
 
 8. **Lives sem escopo educacional explícito são inválidas.**
    Lives só serão consideradas válidas quando o título e a descrição apresentarem evidência suficiente para identificar a ferramenta principal sendo ensinada.
@@ -382,7 +382,11 @@ Não infira ferramentas por contexto, tipo de projeto ou domínio → Classifiqu
 
 LEMBRETE FINAL:
 - Você NÃO PODE criar novas ferramentas
-- Se na sinopse não houver nenhuma evidência concreta, explícita e inequivocamente técnica indicando qual ferramenta da Lista Ferramentas Aceitas está sendo ensinada, classifique como ‘invalido’.
+- Se na sinopse a ferramenta não estiver explicitamente mencionada, não estiver 
+  na lista de ferramentas aceitas, e não tiver um elemento técnico oficial, 
+  documentado e característico da ferramenta, classifique como "invalido".
+- Se a sinopse descrever apenas conceitos (ex: webhooks, DTOs, APIs, microsserviços, padrões de design, arquitetura, etc.)
+  sem mencionar ferramenta da lista de ferramentas aceitas, classifique como "invalido".
 - Se a sinopse for genérica demais (ex: motivacional, opinião,
    apresentação, dicas vagas, cursos, lives), classifique como "invalido".
 
@@ -699,6 +703,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
