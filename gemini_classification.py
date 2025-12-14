@@ -309,7 +309,11 @@ Sinopse Técnica: {row['contexto']}
 
 ---
 🎯 REGRAS:
-1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE ser sempre aquela que o vídeo ENSINA diretamente.
+1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
+   ser aquela sobre a qual a técnica, implementação, configuração, ou construção
+   está sendo diretamente ensinada.
+
+   A ferramenta principal é sempre aquela que o vídeo ENSINA diretamente.
    É o foco do vídeo. Aquela sobre a qual o vídeo está dando instruções práticas e explicando o conceito técnico central do vídeo.
    
 2. Classifique sempre no nível da FERRAMENTA PRINCIPAL
@@ -708,6 +712,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
