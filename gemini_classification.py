@@ -5,6 +5,7 @@ import time
 import json
 import re
 import google.generativeai as genai
+from google.generativeai import GenerationConfig
 from google.cloud import storage
 from google.oauth2 import service_account
 import os
@@ -241,7 +242,7 @@ O texto deve parecer uma descrição de conteúdo feita por um analista técnico
 """
         
         try:            
-            model = genai.GenerativeModel('gemma-3-27b-it')
+            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0.3))
             response = model.generate_content(prompt) 
             classificacao = response.text                    
             classificacoes.append(classificacao)
@@ -401,7 +402,7 @@ Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
         try:
-            model = genai.GenerativeModel('gemma-3-27b-it')
+            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0.3))
             response = model.generate_content(prompt) 
             classificacao = response.text          
             classificacoes.append(classificacao)
@@ -427,8 +428,6 @@ def carregar_trilhas(caminho_json="datasets/trilhas.json"):
     with open(caminho_json, "r", encoding="utf-8") as f:
         dados = json.load(f)
     return dados["trilhas"]
-
-
 
 
 
@@ -553,7 +552,7 @@ Sem explicações. Sem JSON.
         
         # Chamar Groq
         try:
-            model = genai.GenerativeModel('gemma-3-27b-it')
+            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0.3))
             response = model.generate_content(prompt) 
             topico = response.text
             topicos_classificados.append(topico)
@@ -709,6 +708,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
