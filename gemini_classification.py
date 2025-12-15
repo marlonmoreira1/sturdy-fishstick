@@ -211,12 +211,6 @@ REGRAS ABSOLUTAS
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
     Se houver dúvida sobre ser ensino → **"invalido"**.
 
-13. Quando mais de uma ferramenta for explicitamente citada,
-    a sinopse DEVE mencionar APENAS aquela que o vídeo ensina diretamente,
-    sendo esta a ferramenta foco do vídeo, sobre a qual são dadas instruções práticas
-    e explicado o conceito técnico central do vídeo.
-
-
 ======================================================
 ENTRADAS DO VÍDEO
 ======================================================
@@ -233,7 +227,7 @@ contendo exclusivamente informações que sejam **explicitamente sustentadas
 pelo título ou pela descrição**, incluindo:
 
 - A ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ensina diretamente, sendo esta a ferramenta foco do vídeo, sobre a qual são dadas instruções práticas e explicado o conceito técnico central do vídeo.)
-- O conceito técnico central que o vídeo explica
+- Os conceitos técnicos centrais que o vídeo explica
 
 Se qualquer um desses itens **não estiver claramente indicado no título ou na descrição**,
 ele **não deve ser inferido, deduzido ou estimado**.
@@ -242,7 +236,7 @@ O texto deve parecer uma descrição de conteúdo feita por um analista técnico
 """
         
         try:            
-            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0.3))
+            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0.1))
             response = model.generate_content(prompt) 
             classificacao = response.text                    
             classificacoes.append(classificacao)
@@ -406,7 +400,7 @@ Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
 """
         
         try:
-            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0.3))
+            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0.2))
             response = model.generate_content(prompt) 
             classificacao = response.text          
             classificacoes.append(classificacao)
@@ -712,6 +706,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
