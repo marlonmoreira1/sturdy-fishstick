@@ -211,6 +211,7 @@ REGRAS ABSOLUTAS
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
     Se houver dúvida sobre ser ensino → **"invalido"**.
 
+
 ======================================================
 ENTRADAS DO VÍDEO
 ======================================================
@@ -389,7 +390,7 @@ Exemplos válidos:
 {{
     "ferramenta_principal": "nome_exato_da_lista_ou_invalido",
     "tecnologia_base": "tecnologia_base_ou_invalido",
-    "confianca": "alta/media/baixa",
+    "score": 0.90–1.00 → evidência clara | 0.70–0.89 → evidência forte | 0.50–0.69 → evidência ambígua | <0.50 → incerta,
     "cargo": "front-end | back-end | fullstack | devops | qa | analista de dados | engenheiro de dados | cientista de dados | analista de bi | android | ios | invalido",
     "tipo_video": "projeto | aula | curso | invalido"
 }}
@@ -706,6 +707,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
