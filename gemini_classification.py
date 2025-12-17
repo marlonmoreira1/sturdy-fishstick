@@ -225,6 +225,7 @@ pelo título ou pela descrição**, incluindo:
 - A ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ensina diretamente, sendo esta a ferramenta foco do vídeo, sobre a qual são dadas instruções práticas e explicado o conceito técnico central do vídeo.)
 - Os conceitos técnicos centrais que o vídeo explica
 - Sem nenhum ruído e sem violar nenhuma REGRA ABSOLUTA
+- Use apenas informações referentes ao vídeo específico e não de elementos externos
 
 Se qualquer um desses itens **não estiver claramente indicado no título ou na descrição**,
 ele **não deve ser inferido, deduzido ou estimado**.
@@ -703,6 +704,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
