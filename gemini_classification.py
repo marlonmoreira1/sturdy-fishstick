@@ -189,13 +189,8 @@ REGRAS ABSOLUTAS
     aspiracional, anúncios de curso, bootcamp, evento ou venda,
     responda obrigatoriamente: **"invalido"**.
 
-11. É PROIBIDO utilizar informações de curso, playlist, canal,
-    formação, bootcamp, evento ou trilha COMO EVIDÊNCIA TÉCNICA do vídeo.
-    
-    O fato de um vídeo fazer parte de um curso NÃO invalida o conteúdo.
-    A sinopse técnica deve ser baseada EXCLUSIVAMENTE no conteúdo
-    explicitamente descrito no título ou na descrição desse vídeo específico, e NUNCA no nome do curso, playlist, canal,
-    formação, bootcamp, evento ou trilha.
+11. É PROIBIDO utilizar informações (nome, link, etc.) de curso, playlist, canal,
+    formação, bootcamp, evento ou trilha COMO EVIDÊNCIA TÉCNICA do vídeo.    
 
 12. **Vídeos que não sejam de ensino técnico são automaticamente inválidos.**
     Se o vídeo for sobre qualquer um destes tópicos, responda IMEDIATAMENTE: **"invalido"**:
@@ -229,6 +224,7 @@ pelo título ou pela descrição**, incluindo:
 
 - A ferramenta principal citada (A ferramenta principal é sempre aquela que o vídeo ensina diretamente, sendo esta a ferramenta foco do vídeo, sobre a qual são dadas instruções práticas e explicado o conceito técnico central do vídeo.)
 - Os conceitos técnicos centrais que o vídeo explica
+- Sem nenhum ruído e sem violar nenhuma REGRA ABSOLUTA
 
 Se qualquer um desses itens **não estiver claramente indicado no título ou na descrição**,
 ele **não deve ser inferido, deduzido ou estimado**.
@@ -237,7 +233,7 @@ O texto deve parecer uma descrição de conteúdo feita por um analista técnico
 """
         
         try:            
-            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0))
+            model = genai.GenerativeModel(model_name='gemma-3-27b-it', generation_config=GenerationConfig(temperature=0, top_k=1))
             response = model.generate_content(prompt) 
             classificacao = response.text                    
             classificacoes.append(classificacao)
@@ -707,6 +703,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
