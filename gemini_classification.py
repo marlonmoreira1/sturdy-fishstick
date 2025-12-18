@@ -461,8 +461,34 @@ def obter_trilha(classificacao_json, trilhas_data):
     # 5. Não achou nada
     return []
 
+def obter_tecnologia_base(classificacao_json):   
+    if not classificacao_json:
+        return []
+
+    # 1. Garantir que está em dict
+    if isinstance(classificacao_json, str):
+        # Remove ```json e ``` do início/fim
+        cleaned = re.sub(r'^```(?:json)?\s*', '', classificacao_json.strip())
+        cleaned = re.sub(r'\s*```$', '', cleaned)
+        cleaned = cleaned.strip()
+        try:
+            classificacao = json.loads(cleaned)
+        except:
+            return []
+    else:
+        classificacao = classificacao_json
+
+    # 2. Extrair as duas possibilidades
+    ferramenta_principal = classificacao.get("ferramenta_principal", "")
+    tecnologia_base = classificacao.get("tecnologia_base", "")
+    empate_tecnico = classificacao.get("classificacao_com_empate_tecnico_entre_duas_ferramentas_ecossistemas_diferentes", "")
+
+   if empate_tecnico:
+       if ferramenta_principal != tecnologia_base:
+           return tecnologia_base
 
 
+    return ""
 
 
 def classificar_trilhas_groq(df, groq_api_key, coluna_classificacao='classificacao_gemini'):
@@ -663,6 +689,10 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     df_classificado_trilha['topico_trilha'] = df_classificado_trilha['topico_trilha'].astype(str).str.strip().str.lower()
 
     df_classificado_trilha = df_classificado_trilha[~df_classificado_trilha['topico_trilha'].isin(['invalido','sem_trilha'])]
+
+    df_classificado_trilha['tec_base'] = df_classificado_trilha['classificacao_gemini'].apply(obter_tecnologia_base)
+
+    df_classificado_trilha = classificar_trilhas_groq(df_classificado,gemini_api_key,coluna_classificacao='tec_base')
     
     # 7. Salvar resultado final
     output_filename = f"classificados_{START}_{END}.csv"
@@ -704,6 +734,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
