@@ -483,9 +483,9 @@ def obter_tecnologia_base(classificacao_json):
     tecnologia_base = classificacao.get("tecnologia_base", "")
     empate_tecnico = classificacao.get("classificacao_com_empate_tecnico_entre_duas_ferramentas_ecossistemas_diferentes", "")
 
-   if empate_tecnico:
-       if ferramenta_principal != tecnologia_base:
-           return tecnologia_base
+    if empate_tecnico:
+        if ferramenta_principal != tecnologia_base:
+            return tecnologia_base
 
 
     return ""
@@ -734,6 +734,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
