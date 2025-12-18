@@ -461,7 +461,7 @@ def obter_trilha(classificacao_json, trilhas_data):
     # 5. Não achou nada
     return []
 
-def obter_tecnologia_base(classificacao_json):   
+def obter_tecnologia_base(classificacao_json, trilhas_data):   
     if not classificacao_json:
         return []
 
@@ -733,5 +733,6 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
