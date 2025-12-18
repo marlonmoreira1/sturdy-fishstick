@@ -485,13 +485,14 @@ def obter_tecnologia_base(classificacao_json):
 
     if empate_tecnico:
         if ferramenta_principal != tecnologia_base:
-            return tecnologia_base
-
+            for trilha in trilhas_data:
+                if trilha["ferramenta"].upper() == tecnologia_base.upper():
+                    return trilha["topicos"]
 
     return ""
 
 
-def classificar_trilhas_groq(df, groq_api_key, coluna_classificacao='classificacao_gemini'):
+def classificar_trilhas_groq(df, groq_api_key, coluna_classificacao='classificacao_gemini',coluna='topico_trilha',funcao=obter_trilha):
         
     genai.configure(api_key=groq_api_key)
     
@@ -511,7 +512,7 @@ def classificar_trilhas_groq(df, groq_api_key, coluna_classificacao='classificac
         classificacao_json = row[coluna_classificacao]
         
         # Buscar a trilha dessa ferramenta
-        trilha = obter_trilha(classificacao_json, trilhas_data)
+        trilha = funcao(classificacao_json, trilhas_data)
         
         # Se não encontrou trilha, marcar como "sem_trilha"
         if not trilha:
@@ -588,7 +589,7 @@ Sem explicações. Sem JSON.
         time.sleep(3)
     
     # Adicionar coluna ao DataFrame
-    df_para_classificar['topico_trilha'] = topicos_classificados
+    df_para_classificar[coluna] = topicos_classificados
     
     return df_para_classificar
 
@@ -689,10 +690,8 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     df_classificado_trilha['topico_trilha'] = df_classificado_trilha['topico_trilha'].astype(str).str.strip().str.lower()
 
     df_classificado_trilha = df_classificado_trilha[~df_classificado_trilha['topico_trilha'].isin(['invalido','sem_trilha'])]
-
-    df_classificado_trilha['tec_base'] = df_classificado_trilha['classificacao_gemini'].apply(obter_tecnologia_base)
-
-    df_classificado_trilha = classificar_trilhas_groq(df_classificado,gemini_api_key,coluna_classificacao='tec_base')
+    
+    df_classificado_trilha = classificar_trilhas_groq(df_classificado,gemini_api_key,coluna='topico_duplicado',funcao=obter_tecnologia_base)
     
     # 7. Salvar resultado final
     output_filename = f"classificados_{START}_{END}.csv"
@@ -734,129 +733,4 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
