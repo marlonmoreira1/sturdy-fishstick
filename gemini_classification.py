@@ -247,7 +247,7 @@ O texto deve parecer uma descrição de conteúdo feita por um analista técnico
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(9)
+        time.sleep(8.5)
     
     df_para_classificar['contexto'] = classificacoes
     return df_para_classificar
@@ -298,7 +298,7 @@ Git | Cypress | Postman | Selenium | Cypress | JUnit | Espresso | JMeter
 
 **VÍDEO A ANALISAR:**
 Sinopse Técnica: {row['contexto']}
-
+Título do Vídeo: {row['title']}
 ---
 🎯 REGRAS:
 1. Quando mais de uma ferramenta da lista for citada na sinopse, a ferramenta principal DEVE
@@ -387,7 +387,7 @@ Exemplos válidos:
 {{
     "ferramenta_principal": "nome_exato_da_lista_ou_invalido",
     "tecnologia_base": "tecnologia_base_ou_invalido",
-    "score": 0.90–1.00 → evidência clara | 0.70–0.89 → evidência forte | 0.50–0.69 → evidência ambígua | <0.50 → incerta,
+    "classificacao_com_empate_tecnico_entre_duas_ferramentas_ecossistemas_diferentes": true/false,
     "cargo": "front-end | back-end | fullstack | devops | qa | analista de dados | engenheiro de dados | cientista de dados | analista de bi | android | ios | invalido",
     "tipo_video": "projeto | aula | curso | invalido"
 }}
@@ -411,7 +411,7 @@ Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(5)
+        time.sleep(4.5)
     
     df_para_classificar['classificacao_gemini'] = classificacoes
     return df_para_classificar
@@ -527,7 +527,7 @@ DADOS DO VÍDEO
 ==================================================
 
 Sinopse Técnica: {row['contexto']}
-
+Título do Vídeo: {row['title']}
 ==================================================
 TÓPICOS DISPONÍVEIS PARA "{classificacao_json}":
 {trilha_txt}
@@ -559,7 +559,7 @@ Sem explicações. Sem JSON.
             topicos_classificados.append("erro")
         
         # Rate limit
-        time.sleep(4)
+        time.sleep(3.5)
     
     # Adicionar coluna ao DataFrame
     df_para_classificar['topico_trilha'] = topicos_classificados
@@ -704,6 +704,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
