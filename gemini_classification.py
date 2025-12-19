@@ -627,52 +627,54 @@ def upload_df_to_gcs_raw(df, bucket_name, filename):
 def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     """Executa teste completo"""
     
-    print("=" * 70)
-    print("INICIANDO TESTE")
-    print("=" * 70)
+    # print("=" * 70)
+    # print("INICIANDO TESTE")
+    # print("=" * 70)
     
     # 1. Carregar 60 canais
-    df_canais = carregar_canais(csv_path, start=start, end=end)
+    # df_canais = carregar_canais(csv_path, start=start, end=end)
     
     # 2. Buscar vídeos de todos os canais
-    todos_videos = []
+    # todos_videos = []
     
-    for idx, row in df_canais.iterrows():
-        channel_id = row['channel_id']
-        channel_name = row['channel_title']
+    # for idx, row in df_canais.iterrows():
+        # channel_id = row['channel_id']
+        # channel_name = row['channel_title']
         
-        print(f"\n[{idx+1}/60] Processando: {channel_name}")
+        # print(f"\n[{idx+1}/60] Processando: {channel_name}")
         
-        try:
+        # try:
             # Buscar video IDs
-            video_ids = buscar_video_ids_canal(channel_id, youtube_api_key)
-            print(f"  → {len(video_ids)} vídeos encontrados")
+            # video_ids = buscar_video_ids_canal(channel_id, youtube_api_key)
+            # print(f"  → {len(video_ids)} vídeos encontrados")
             
             # Buscar metadados
-            if video_ids:
-                videos_data = buscar_metadados_videos(video_ids, youtube_api_key)
-                todos_videos.extend(videos_data)
-                print(f"  → Metadados coletados: {len(videos_data)}")
+            # if video_ids:
+                # videos_data = buscar_metadados_videos(video_ids, youtube_api_key)
+                # todos_videos.extend(videos_data)
+                # print(f"  → Metadados coletados: {len(videos_data)}")
             
-        except Exception as e:
-            print(f"  ❌ Erro: {e}")
-            continue
+        # except Exception as e:
+            # print(f"  ❌ Erro: {e}")
+            # continue
     
     # 3. Criar DataFrame
-    print(f"\n{'=' * 70}")
-    print(f"Total de vídeos coletados: {len(todos_videos)}")
-    df_videos = pd.DataFrame(todos_videos)
+    # print(f"\n{'=' * 70}")
+    # print(f"Total de vídeos coletados: {len(todos_videos)}")
+    # df_videos = pd.DataFrame(todos_videos)
     
     # 4. Filtrar por data (junho/2024+)
-    df_filtrado = filtrar_por_data(df_videos, data_minima='2021-01-01')
+    # df_filtrado = filtrar_por_data(df_videos, data_minima='2021-01-01')
     
     # 5. Salvar intermediário
     # df_filtrado.to_csv('videos_coletados_1000.csv', index=False, sep=';')
     # print(f"✅ Vídeos salvos: videos_coletados_terca.csv")
     
-    # df_filtrado = pd.read_csv('videos_coletados_1000.csv',sep=';', encoding='utf-8')
-
-    df_filtrado = df_filtrado[df_filtrado['likeCount'] > 25]
+    df_filtrado = pd.read_csv('videos_coletados.csv',sep=';', encoding='utf-8')
+    
+    df_filtrado = df_filtrado.iloc[start:end]
+    
+    # df_filtrado = df_filtrado[df_filtrado['likeCount'] > 25]
     
     # 6. Classificar 100 vídeos
     print(f"\n{'=' * 70}")
@@ -680,6 +682,8 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     print("=" * 70)
 
     df_contextualizado = contextualizar_videos_groq(df_filtrado, gemini_api_key, limite=100)
+
+    df_contextualizado['contexto'] = df_contextualizado['contexto'].astype(str).str.strip().str.lower()
 
     df_contextualizado = df_contextualizado[df_contextualizado['contexto']!='invalido']
     
@@ -733,6 +737,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
