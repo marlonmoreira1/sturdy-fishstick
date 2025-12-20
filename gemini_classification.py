@@ -671,7 +671,8 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
     # print(f"✅ Vídeos salvos: videos_coletados_terca.csv")
     
     df_filtrado = pd.read_csv('datasets/videos_coletados.csv',sep=';')
-    
+    print(df_filtrado.columns)
+    print(df_filtrado.shape)
     df_filtrado = df_filtrado.iloc[start:end]
     
     # df_filtrado = df_filtrado[df_filtrado['likeCount'] > 25]
@@ -737,6 +738,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
