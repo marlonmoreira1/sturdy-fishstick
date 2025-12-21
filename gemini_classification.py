@@ -283,7 +283,7 @@ seguindo exclusivamente a lista de ferramentas aceitas do sistema.
 
 **LISTA FERRAMENTAS ACEITAS (use EXATAMENTE estes nomes):**
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
-React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel
+React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel | React Native
 PyTorch | TensorFlow | scikit-learn | Model Context Protocol (MCP)
 MongoDB
 Linux | IDE
@@ -737,6 +737,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
