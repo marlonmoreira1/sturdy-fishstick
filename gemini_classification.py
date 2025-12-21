@@ -247,7 +247,7 @@ O texto deve parecer uma descrição de conteúdo feita por um analista técnico
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(7)
+        time.sleep(8)
     
     df_para_classificar['contexto'] = classificacoes
     return df_para_classificar
@@ -411,7 +411,7 @@ Use essa decisão para classificar; NÃO exponha nem explique esse raciocínio.
             print(f"Erro ao classificar vídeo {row['video_id']}: {e}")
             classificacoes.append("erro")
 
-        time.sleep(4)
+        time.sleep(4.5)
     
     df_para_classificar['classificacao_gemini'] = classificacoes
     return df_para_classificar
@@ -737,6 +737,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
