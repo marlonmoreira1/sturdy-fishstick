@@ -321,7 +321,7 @@ Título do Vídeo: {row['title']}
    - Notícias (lançamentos, atualizações, banimentos, regulações)
    - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
    - Reacts (reagindo a conteúdo de terceiros)
-   - Análises de mercado ou tendências tecnológicas
+   - Análises de mercado, ferramentas, empresas ou tendências tecnológicas
    - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
    - Discussões, opiniões ou debates sobre ferramentas
@@ -737,6 +737,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
