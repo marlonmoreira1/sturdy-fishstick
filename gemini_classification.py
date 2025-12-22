@@ -197,7 +197,8 @@ REGRAS ABSOLUTAS
     - Notícias (lançamentos, atualizações, banimentos, regulações)
     - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
     - Reacts (reagindo a conteúdo de terceiros)
-    - Conteúdos sobre empresas, mercado ou tendências tecnológicas
+    - Entrevistas, bate-papos ou bastidores de empresas/profissionais
+    - Análises sobre empresas, mercado, indústria ou tendências tecnológicas
     - Dicas de carreira, sucesso profissional ou trajetória
     - Anúncios de cursos, eventos ou promoções
     - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto ou discussões
@@ -321,7 +322,8 @@ Título do Vídeo: {row['title']}
    - Notícias (lançamentos, atualizações, banimentos, regulações)
    - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
    - Reacts (reagindo a conteúdo de terceiros)
-   - Conteúdos sobre empresas, mercado ou tendências tecnológicas
+   - Entrevistas, bate-papos ou bastidores de empresas/profissionais
+   - Análises sobre empresas, mercado, indústria ou tendências tecnológicas
    - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
    - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto ou discussões
@@ -737,6 +739,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
