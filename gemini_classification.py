@@ -202,7 +202,7 @@ REGRAS ABSOLUTAS
     - Dicas de carreira, sucesso profissional ou trajetória
     - Anúncios de cursos, eventos ou promoções
     - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto ou discussões
-    - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
+    - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto, discussões, opiniões ou debates
     
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
     Se houver dúvida sobre ser ensino → **"invalido"**.
@@ -326,7 +326,7 @@ Título do Vídeo: {row['title']}
    - Análises sobre empresas, mercado, indústria ou tendências tecnológicas
    - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
-   - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto ou discussões
+   - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto, discussões, opiniões ou debates
    - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
    
    Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
@@ -687,7 +687,7 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
 
     df_contextualizado['contexto'] = df_contextualizado['contexto'].astype(str).str.strip().str.lower()
 
-    df_contextualizado = df_contextualizado[df_contextualizado['contexto']!='invalido']
+    df_contextualizado = df_contextualizado[~df_contextualizado['contexto'].isin(['invalido','erro'])]
     
     df_classificado = classificar_videos_groq(df_contextualizado, gemini_api_key, limite=100)
 
@@ -739,27 +739,4 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
