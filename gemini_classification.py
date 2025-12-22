@@ -198,10 +198,10 @@ REGRAS ABSOLUTAS
     - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
     - Reacts (reagindo a conteúdo de terceiros)
     - Entrevistas, bate-papos, podcasts ou bastidores de empresas/profissionais (ex: "Como é a infra do iFood", "Stack da empresa X", "Desafios reais de escala")
-    - Análises sobre empresas, mercado, indústria ou tendências tecnológicas
+    - Análises de ferramenta, mercado ou tendências tecnológicas
     - Dicas de carreira, sucesso profissional ou trajetória
     - Anúncios de cursos, eventos ou promoções
-    - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto, discussões, opiniões ou debates
+    - Discussões, opiniões ou debates sobre ferramentas
     - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
     
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
@@ -323,10 +323,10 @@ Título do Vídeo: {row['title']}
    - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
    - Reacts (reagindo a conteúdo de terceiros)
    - Entrevistas, bate-papos, podcasts ou bastidores de empresas/profissionais (ex: "Como é a infra do iFood", "Stack da empresa X", "Desafios reais de escala")
-   - Análises sobre empresas, mercado, indústria ou tendências tecnológicas
+   - Análises de ferramenta, mercado ou tendências tecnológicas
    - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
-   - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto, discussões, opiniões ou debates
+   - Discussões, opiniões ou debates sobre ferramentas
    - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
    
    Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
@@ -739,5 +739,6 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
