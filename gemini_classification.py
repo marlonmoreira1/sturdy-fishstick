@@ -375,11 +375,11 @@ Exemplos válidos:
 - Components, Props do Vue
 
 7. Não infira ferramentas quando a sinopse mencionar APENAS:
-    - Contexto geral sem ferramenta da lista (ex: "backend", "aplicação", "front-end", "API", "servidor")
-    - Tipo de projeto sem ferramenta da lista (ex: "chat", "dashboard", "IA", "e-commerce", "blog")
+    - Contexto geral sem ferramenta da lista (ex: "backend", "aplicação", "front-end", "API", "servidor", etc.)
+    - Tipo de projeto sem ferramenta da lista (ex: "chat", "dashboard", "IA", "e-commerce", "blog", etc.)
     - Se a sinopse descrever apenas conceitos sem ferramenta da lista (ex: webhooks, DTOs, APIs, microsserviços, padrões de design, arquitetura, etc.)  
-    - Ferramentas não listadas sem ferramenta da lista (ex: Bubble, Vercel, Netlify, n8n, Zapier, Webflow, WordPress, IFTTT, Make (Integromat))
-    - Se a sinopse for genérica demais (ex: motivacional, opinião, apresentação, dicas vagas, cursos, lives)
+    - Ferramentas não listadas sem ferramenta da lista (ex: Bubble, Vercel, Netlify, n8n, Zapier, Webflow, WordPress, IFTTT, Make (Integromat), etc.)
+    - Se a sinopse for genérica demais (ex: motivacional, opinião, apresentação, dicas vagas, cursos, lives, etc.)
     Nesses casos, se NÃO houver ferramenta da LISTA DE FERRAMENTAS ACEITAS explicitamente mencionada, classifique como "invalido".
 
 **RESPONDA APENAS COM JSON (sem markdown, sem explicações):**
@@ -737,6 +737,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
