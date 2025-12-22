@@ -197,10 +197,10 @@ REGRAS ABSOLUTAS
     - Notícias (lançamentos, atualizações, banimentos, regulações)
     - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
     - Reacts (reagindo a conteúdo de terceiros)
-    - Análises de empresa, ferramenta, mercado ou tendências tecnológicas
+    - Conteúdos sobre empresas, mercado ou tendências tecnológicas
     - Dicas de carreira, sucesso profissional ou trajetória
     - Anúncios de cursos, eventos ou promoções
-    - Discussões, opiniões, bastidores, debates sobre empresa, ferramenta, mercado ou tendências tecnológicas
+    - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto ou discussões
     - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
     
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
@@ -321,10 +321,10 @@ Título do Vídeo: {row['title']}
    - Notícias (lançamentos, atualizações, banimentos, regulações)
    - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
    - Reacts (reagindo a conteúdo de terceiros)
-   - Análises de empresa, ferramenta, mercado ou tendências tecnológicas
+   - Conteúdos sobre empresas, mercado ou tendências tecnológicas
    - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
-   - Discussões, opiniões, bastidores, debates sobre empresa, ferramenta, mercado ou tendências tecnológicas
+   - Conteúdos sobre ferramentas que sejam notícias, comparativos, reviews, análises de impacto ou discussões
    - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
    
    Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
@@ -375,8 +375,8 @@ Exemplos válidos:
 - Components, Props do Vue
 
 7. Não infira ferramentas quando a sinopse mencionar APENAS:
-    - Contexto geral sem ferramenta da lista (ex: "backend", "aplicação", "front-end", "API", "servidor", etc.)
-    - Tipo de projeto sem ferramenta da lista (ex: "chat", "dashboard", "IA", "e-commerce", "blog", etc.)
+    - Contexto geral sem ferramenta da lista (ex: "backend", "aplicação", "front-end", "API", "servidor", "webscraping", etc.)
+    - Tipo de projeto sem ferramenta da lista (ex: "chat", "dashboard", "IA", "e-commerce", "blog", "webscraping", etc.)
     - Se a sinopse descrever apenas conceitos sem ferramenta da lista (ex: webhooks, DTOs, APIs, microsserviços, padrões de design, arquitetura, etc.)  
     - Ferramentas não listadas sem ferramenta da lista (ex: Bubble, Vercel, Netlify, n8n, Zapier, Webflow, WordPress, IFTTT, Make (Integromat), etc.)
     - Se a sinopse for genérica demais (ex: motivacional, opinião, apresentação, dicas vagas, cursos, lives, etc.)
@@ -737,6 +737,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
