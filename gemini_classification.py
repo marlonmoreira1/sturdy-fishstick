@@ -197,10 +197,10 @@ REGRAS ABSOLUTAS
     - Notícias (lançamentos, atualizações, banimentos, regulações)
     - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
     - Reacts (reagindo a conteúdo de terceiros)
-    - Análises de empresas, ferramentas, mercado ou tendências tecnológicas
+    - Análises de empresa, ferramenta, mercado ou tendências tecnológicas
     - Dicas de carreira, sucesso profissional ou trajetória
     - Anúncios de cursos, eventos ou promoções
-    - Discussões, opiniões ou debates sobre empresas, ferramentas, mercado ou tendências tecnológicas
+    - Discussões, opiniões, bastidores, debates sobre empresa, ferramenta, mercado ou tendências tecnológicas
     - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
     
     Só continue se o vídeo for de **ensino técnico** (educação em tecnologia).
@@ -321,10 +321,10 @@ Título do Vídeo: {row['title']}
    - Notícias (lançamentos, atualizações, banimentos, regulações)
    - Reviews ou comparativos (X vs Y, "qual é melhor", rankings)
    - Reacts (reagindo a conteúdo de terceiros)
-   - Análises de empresas, ferramentas, mercado ou tendências tecnológicas
+   - Análises de empresa, ferramenta, mercado ou tendências tecnológicas
    - Dicas de carreira, sucesso profissional ou trajetória
    - Anúncios de cursos, eventos ou promoções
-   - Discussões, opiniões ou debates sobre empresas, ferramentas, mercado ou tendências tecnológicas
+   - Discussões, opiniões, bastidores, debates sobre empresa, ferramenta, mercado ou tendências tecnológicas
    - Conteúdos sobre LLMs (ChatGPT, Claude, Gemini, DeepSeek, etc.) que sejam notícias, comparativos, reviews, análises de impacto ou discussões
    
    Só classifique se a sinopse descrever claramente **ensino técnico** (educação em tecnologia).
@@ -737,6 +737,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
