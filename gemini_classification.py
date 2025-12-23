@@ -350,6 +350,7 @@ Exemplos válidos:
 - Lodash → biblioteca JavaScript → tecnologia_base: JavaScript
 - CloudWatch → serviço de monitoramento AWS → tecnologia_base: AWS
 - docker run → comando Docker → tecnologia_base: Docker
+- NestJS (também escrito Nest.js, não confundir com Next.js são frameworks diferentes) → framework Node.js → tecnologia_base: Node.js
 
 ✔ Nome da ferramenta (ex.: React, Terraform, Power BI)
 ✔ Um conceito, operação ou recurso oficial e documentado da ferramenta
@@ -739,6 +740,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
