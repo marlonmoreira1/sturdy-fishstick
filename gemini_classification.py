@@ -696,7 +696,7 @@ def executar_teste(csv_path, youtube_api_key, gemini_api_key, start, end):
 
     df_classificado_trilha['topico_trilha'] = df_classificado_trilha['topico_trilha'].astype(str).str.strip().str.lower()
 
-    df_classificado_trilha = df_classificado_trilha[~df_classificado_trilha['topico_trilha'].isin(['invalido','sem_trilha'])]
+    df_classificado_trilha = df_classificado_trilha[~df_classificado_trilha['topico_trilha'].isin(['invalido','sem_trilha','erro'])]
     
     df_classificado_trilha = classificar_trilhas_groq(df_classificado_trilha,gemini_api_key,coluna='topico_duplicado',funcao=obter_tecnologia_base)
     
@@ -740,6 +740,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
