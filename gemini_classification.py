@@ -286,7 +286,7 @@ seguindo exclusivamente a lista de ferramentas aceitas do sistema.
 Python | Java | C | C++ | JavaScript | TypeScript | PHP | Go | Rust | Kotlin | Swift | SQL | HTML | CSS
 React | Angular | Vue | Next.js | Node.js | Spring Boot | Express | GraphQL | Flutter | Tailwind CSS | Vite | Pandas | dbt | Spark | MLflow | Laravel | React Native | Prisma | NestJS
 PyTorch | TensorFlow | Scikit-Learn | Model Context Protocol (MCP)
-MongoDB | Firebase | Supabase
+MongoDB | Firebase | Supabase | Redis
 Linux | IDE
 Docker | Kubernetes | Airflow | Jenkins | GitHub Actions | Terraform 
 AWS | Azure | GCP
@@ -740,6 +740,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
     print(df_resultado[['title', 'channel_name', 'published_at', 'viewCount']].head(10))
+
 
 
 
